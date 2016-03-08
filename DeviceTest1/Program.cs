@@ -96,8 +96,6 @@ namespace DeviceSample
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                //Now structure the request so that it searches on the fields you want.
-                //Here is a request that returns the top 100 devices in the database
                 var request = String.Format("devicesearchfeedback/{0}?action={1}&entityid={2}", serviceCallId, action.ToString(), deviceId);
 
                 //Fire and forget.  No need to wait for this method to complete, or check on whether or not it was successful.
