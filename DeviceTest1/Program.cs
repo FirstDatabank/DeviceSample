@@ -10,7 +10,7 @@ namespace DeviceSample
     {
         //Note:  Make this address configurable in your app.  It is almost certainly going to change for our device services.
         //Also note that right now this url and parameter names are case sensitive.
-        const string baseAddress = "https://api.fdbcloudconnector.com/cc/api/v1_0/";
+        const string baseAddress = "https://api.fdbprizm.com/cc/api/v1_0/";
 
         //Update these two variables with the credentials provided by FDB
         const string clientId = "REPLACE_THIS_TEXT_WITH_YOUR_PROVIDED_CLIENT_ID";
@@ -44,8 +44,14 @@ namespace DeviceSample
                 //Here is an example of searching for a HIBC
                 //var request = "devices?searchFilter=HIBC:H981038073560&callSystemName=ConsoleAppExample";
 
+                //Here is an example of searching for any identifier (GTIN, HIBC, NDC/NHRIC, UPN etc.)
+                //var request = "devices?searchFilter=ExternalDeviceId:00855547005212&callSystemName=ConsoleAppExample";
+
+
                 //Here is an example where you are searching and you don't necessarily know the type
                 //var request = "devices?searchText=08717648177583&searchType=Fuzzy&callSystemName=ConsoleAppExample";
+
+
 
 
                 //We always recommend calling API services asynchronously
@@ -58,9 +64,9 @@ namespace DeviceSample
                 {
 
                     var r = await response.Content.ReadAsAsync<SearchDevicesResponse>();
-                    foreach (var dev in r.Items)
+                    foreach (var device in r.Items)
                     {
-                        Console.WriteLine(dev.DeviceName);
+                        Console.WriteLine(device.StandardDeviceName);
                     }
 
                     Console.WriteLine("");
@@ -71,7 +77,7 @@ namespace DeviceSample
                     //well as the Id that was chosen, and the action that was taken on it.  In this case, we don't have the stable
                     //FDBId for devices out there yet, so just send back the name of the device selected.
                     //This can be a fire and forget method, so it does not need to impact the performance of your app
-                    SendFeedback(r.SeviceCallID, r.Items[0].DeviceName, SearchAction.selected);
+                    SendFeedback(r.SeviceCallId, r.Items[0].StandardDeviceName, SearchAction.selected);
                 }
                 else
                 {

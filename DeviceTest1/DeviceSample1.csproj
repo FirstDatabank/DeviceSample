@@ -55,14 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="enums.cs" />
-    <Compile Include="Model\CallContext.cs" />
-    <Compile Include="Model\ConsumerInfo.cs" />
     <Compile Include="Model\Device.cs" />
-    <Compile Include="Model\DeviceTerm.cs" />
-    <Compile Include="Model\FDAProductInfo.cs" />
+    <Compile Include="Model\DeviceCategory.cs" />
+    <Compile Include="Model\DeviceIdentifier.cs" />
+    <Compile Include="Model\PackageInfo.cs" />
     <Compile Include="Model\SearchDevicesResponse.cs" />
     <Compile Include="Model\SizeInfo.cs" />
-    <Compile Include="Model\StorageInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

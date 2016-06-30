@@ -34,42 +34,42 @@ using Newtonsoft.Json.Converters;
 namespace DeviceSample.Model
 {
     /// <summary>
-    /// Returns clinical dimensions of the product
+    /// Returns the package information of the device
     /// </summary>
     [DataContract]
-    public partial class SizeInfo :  IEquatable<SizeInfo>
+    public partial class PackageInfo :  IEquatable<PackageInfo>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SizeInfo" /> class.
+        /// Initializes a new instance of the <see cref="PackageInfo" /> class.
         /// </summary>
-        /// <param name="SizeUnitAbbreviation">Returns the size unit abbreviation.</param>
-        /// <param name="SizeValue">Returns the size.</param>
-        /// <param name="SizeType">Returns the size type.</param>
-        public SizeInfo(string SizeUnitAbbreviation = null, string SizeValue = null, string SizeType = null)
+        /// <param name="PackageQuantity">Returns the package quantity.</param>
+        /// <param name="PackageTypeCode">Returns the package type code.</param>
+        /// <param name="PackageTypeDesc">Returns the package type code description.</param>
+        public PackageInfo(string PackageQuantity = null, string PackageTypeCode = null, string PackageTypeDesc = null)
         {
-            this.SizeUnitAbbreviation = SizeUnitAbbreviation;
-            this.SizeValue = SizeValue;
-            this.SizeType = SizeType;
+            this.PackageQuantity = PackageQuantity;
+            this.PackageTypeCode = PackageTypeCode;
+            this.PackageTypeDesc = PackageTypeDesc;
         }
         
         /// <summary>
-        /// Returns the size unit abbreviation
+        /// Returns the package quantity
         /// </summary>
-        /// <value>Returns the size unit abbreviation</value>
-        [DataMember(Name="SizeUnitAbbreviation", EmitDefaultValue=false)]
-        public string SizeUnitAbbreviation { get; set; }
+        /// <value>Returns the package quantity</value>
+        [DataMember(Name="PackageQuantity", EmitDefaultValue=false)]
+        public string PackageQuantity { get; set; }
         /// <summary>
-        /// Returns the size
+        /// Returns the package type code
         /// </summary>
-        /// <value>Returns the size</value>
-        [DataMember(Name="SizeValue", EmitDefaultValue=false)]
-        public string SizeValue { get; set; }
+        /// <value>Returns the package type code</value>
+        [DataMember(Name="PackageTypeCode", EmitDefaultValue=false)]
+        public string PackageTypeCode { get; set; }
         /// <summary>
-        /// Returns the size type
+        /// Returns the package type code description
         /// </summary>
-        /// <value>Returns the size type</value>
-        [DataMember(Name="SizeType", EmitDefaultValue=false)]
-        public string SizeType { get; set; }
+        /// <value>Returns the package type code description</value>
+        [DataMember(Name="PackageTypeDesc", EmitDefaultValue=false)]
+        public string PackageTypeDesc { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -77,10 +77,10 @@ namespace DeviceSample.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SizeInfo {\n");
-            sb.Append("  SizeUnitAbbreviation: ").Append(SizeUnitAbbreviation).Append("\n");
-            sb.Append("  SizeValue: ").Append(SizeValue).Append("\n");
-            sb.Append("  SizeType: ").Append(SizeType).Append("\n");
+            sb.Append("class PackageInfo {\n");
+            sb.Append("  PackageQuantity: ").Append(PackageQuantity).Append("\n");
+            sb.Append("  PackageTypeCode: ").Append(PackageTypeCode).Append("\n");
+            sb.Append("  PackageTypeDesc: ").Append(PackageTypeDesc).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,15 +102,15 @@ namespace DeviceSample.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SizeInfo);
+            return this.Equals(obj as PackageInfo);
         }
 
         /// <summary>
-        /// Returns true if SizeInfo instances are equal
+        /// Returns true if PackageInfo instances are equal
         /// </summary>
-        /// <param name="other">Instance of SizeInfo to be compared</param>
+        /// <param name="other">Instance of PackageInfo to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SizeInfo other)
+        public bool Equals(PackageInfo other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -118,19 +118,19 @@ namespace DeviceSample.Model
 
             return 
                 (
-                    this.SizeUnitAbbreviation == other.SizeUnitAbbreviation ||
-                    this.SizeUnitAbbreviation != null &&
-                    this.SizeUnitAbbreviation.Equals(other.SizeUnitAbbreviation)
+                    this.PackageQuantity == other.PackageQuantity ||
+                    this.PackageQuantity != null &&
+                    this.PackageQuantity.Equals(other.PackageQuantity)
                 ) && 
                 (
-                    this.SizeValue == other.SizeValue ||
-                    this.SizeValue != null &&
-                    this.SizeValue.Equals(other.SizeValue)
+                    this.PackageTypeCode == other.PackageTypeCode ||
+                    this.PackageTypeCode != null &&
+                    this.PackageTypeCode.Equals(other.PackageTypeCode)
                 ) && 
                 (
-                    this.SizeType == other.SizeType ||
-                    this.SizeType != null &&
-                    this.SizeType.Equals(other.SizeType)
+                    this.PackageTypeDesc == other.PackageTypeDesc ||
+                    this.PackageTypeDesc != null &&
+                    this.PackageTypeDesc.Equals(other.PackageTypeDesc)
                 );
         }
 
@@ -145,12 +145,12 @@ namespace DeviceSample.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.SizeUnitAbbreviation != null)
-                    hash = hash * 59 + this.SizeUnitAbbreviation.GetHashCode();
-                if (this.SizeValue != null)
-                    hash = hash * 59 + this.SizeValue.GetHashCode();
-                if (this.SizeType != null)
-                    hash = hash * 59 + this.SizeType.GetHashCode();
+                if (this.PackageQuantity != null)
+                    hash = hash * 59 + this.PackageQuantity.GetHashCode();
+                if (this.PackageTypeCode != null)
+                    hash = hash * 59 + this.PackageTypeCode.GetHashCode();
+                if (this.PackageTypeDesc != null)
+                    hash = hash * 59 + this.PackageTypeDesc.GetHashCode();
                 return hash;
             }
         }

@@ -34,42 +34,34 @@ using Newtonsoft.Json.Converters;
 namespace DeviceSample.Model
 {
     /// <summary>
-    /// Returns clinical dimensions of the product
+    /// Returns the category information of the device
     /// </summary>
     [DataContract]
-    public partial class SizeInfo :  IEquatable<SizeInfo>
+    public partial class DeviceCategory :  IEquatable<DeviceCategory>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SizeInfo" /> class.
+        /// Initializes a new instance of the <see cref="DeviceCategory" /> class.
         /// </summary>
-        /// <param name="SizeUnitAbbreviation">Returns the size unit abbreviation.</param>
-        /// <param name="SizeValue">Returns the size.</param>
-        /// <param name="SizeType">Returns the size type.</param>
-        public SizeInfo(string SizeUnitAbbreviation = null, string SizeValue = null, string SizeType = null)
+        /// <param name="CategoryName">Returns the category name.</param>
+        /// <param name="CategoryType">Returns the category type.</param>
+        public DeviceCategory(string CategoryName = null, string CategoryType = null)
         {
-            this.SizeUnitAbbreviation = SizeUnitAbbreviation;
-            this.SizeValue = SizeValue;
-            this.SizeType = SizeType;
+            this.CategoryName = CategoryName;
+            this.CategoryType = CategoryType;
         }
         
         /// <summary>
-        /// Returns the size unit abbreviation
+        /// Returns the category name
         /// </summary>
-        /// <value>Returns the size unit abbreviation</value>
-        [DataMember(Name="SizeUnitAbbreviation", EmitDefaultValue=false)]
-        public string SizeUnitAbbreviation { get; set; }
+        /// <value>Returns the category name</value>
+        [DataMember(Name="CategoryName", EmitDefaultValue=false)]
+        public string CategoryName { get; set; }
         /// <summary>
-        /// Returns the size
+        /// Returns the category type
         /// </summary>
-        /// <value>Returns the size</value>
-        [DataMember(Name="SizeValue", EmitDefaultValue=false)]
-        public string SizeValue { get; set; }
-        /// <summary>
-        /// Returns the size type
-        /// </summary>
-        /// <value>Returns the size type</value>
-        [DataMember(Name="SizeType", EmitDefaultValue=false)]
-        public string SizeType { get; set; }
+        /// <value>Returns the category type</value>
+        [DataMember(Name="CategoryType", EmitDefaultValue=false)]
+        public string CategoryType { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -77,10 +69,9 @@ namespace DeviceSample.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SizeInfo {\n");
-            sb.Append("  SizeUnitAbbreviation: ").Append(SizeUnitAbbreviation).Append("\n");
-            sb.Append("  SizeValue: ").Append(SizeValue).Append("\n");
-            sb.Append("  SizeType: ").Append(SizeType).Append("\n");
+            sb.Append("class DeviceCategory {\n");
+            sb.Append("  CategoryName: ").Append(CategoryName).Append("\n");
+            sb.Append("  CategoryType: ").Append(CategoryType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,15 +93,15 @@ namespace DeviceSample.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SizeInfo);
+            return this.Equals(obj as DeviceCategory);
         }
 
         /// <summary>
-        /// Returns true if SizeInfo instances are equal
+        /// Returns true if DeviceCategory instances are equal
         /// </summary>
-        /// <param name="other">Instance of SizeInfo to be compared</param>
+        /// <param name="other">Instance of DeviceCategory to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SizeInfo other)
+        public bool Equals(DeviceCategory other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -118,19 +109,14 @@ namespace DeviceSample.Model
 
             return 
                 (
-                    this.SizeUnitAbbreviation == other.SizeUnitAbbreviation ||
-                    this.SizeUnitAbbreviation != null &&
-                    this.SizeUnitAbbreviation.Equals(other.SizeUnitAbbreviation)
+                    this.CategoryName == other.CategoryName ||
+                    this.CategoryName != null &&
+                    this.CategoryName.Equals(other.CategoryName)
                 ) && 
                 (
-                    this.SizeValue == other.SizeValue ||
-                    this.SizeValue != null &&
-                    this.SizeValue.Equals(other.SizeValue)
-                ) && 
-                (
-                    this.SizeType == other.SizeType ||
-                    this.SizeType != null &&
-                    this.SizeType.Equals(other.SizeType)
+                    this.CategoryType == other.CategoryType ||
+                    this.CategoryType != null &&
+                    this.CategoryType.Equals(other.CategoryType)
                 );
         }
 
@@ -145,12 +131,10 @@ namespace DeviceSample.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.SizeUnitAbbreviation != null)
-                    hash = hash * 59 + this.SizeUnitAbbreviation.GetHashCode();
-                if (this.SizeValue != null)
-                    hash = hash * 59 + this.SizeValue.GetHashCode();
-                if (this.SizeType != null)
-                    hash = hash * 59 + this.SizeType.GetHashCode();
+                if (this.CategoryName != null)
+                    hash = hash * 59 + this.CategoryName.GetHashCode();
+                if (this.CategoryType != null)
+                    hash = hash * 59 + this.CategoryType.GetHashCode();
                 return hash;
             }
         }
