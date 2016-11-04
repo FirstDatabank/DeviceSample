@@ -42,17 +42,17 @@ namespace DeviceSample
 
                 //OTHER EXAMPLES:
                 //Here is an example of searching for a GTIN14
-                //var request = "devices?searchFilter=GTIN14:10381780045854&callSystemName=ConsoleAppExample";
+                //var request = "devices?searchFilter=GTIN14:00505519697267&callSystemName=ConsoleAppExample";
 
                 //Here is an example of searching for a HIBC
-                //var request = "devices?searchFilter=HIBC:H981038073560&callSystemName=ConsoleAppExample";
+                //var request = "devices?searchFilter=HIBC:H476724041361&callSystemName=ConsoleAppExample";
 
                 //Here is an example of searching for any identifier (GTIN, HIBC, NDC/NHRIC, UPN etc.)
-                //var request = "devices?searchFilter=ExternalDeviceId:00855547005212&callSystemName=ConsoleAppExample";
+                //var request = "devices?searchFilter=ExternalDeviceId:H476724041361&callSystemName=ConsoleAppExample";
 
 
                 //Here is an example where you are searching and you don't necessarily know the type
-                //var request = "devices?searchText=08717648177583&searchType=Fuzzy&callSystemName=ConsoleAppExample";
+                //var request = "devices?searchText=H476724041361&searchType=Fuzzy&callSystemName=ConsoleAppExample";
 
                 //Here is an example where you can search between dates on the PrizmRevisionDate
                 //var request = "devices?SearchFilter=PrizmRevisionDate:[2016-10-27 TO 2016-10-28]"; 
