@@ -13,6 +13,9 @@ namespace DeviceSample
         const string baseAddress = "https://api.fdbprizm.com/cc/api/v1_0/";
 
         //Update these two variables with the credentials provided by FDB
+        //const string clientId = "REPLACE_THIS_TEXT_WITH_YOUR_PROVIDED_CLIENT_ID";
+        //const string secret = "REPLACE_THIS_TEXT_WITH_YOUR_PROVIDED_SECRET";
+
         const string clientId = "REPLACE_THIS_TEXT_WITH_YOUR_PROVIDED_CLIENT_ID";
         const string secret = "REPLACE_THIS_TEXT_WITH_YOUR_PROVIDED_SECRET";
 

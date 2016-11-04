@@ -58,9 +58,14 @@
     <Compile Include="Model\Device.cs" />
     <Compile Include="Model\DeviceCategory.cs" />
     <Compile Include="Model\DeviceIdentifier.cs" />
+    <Compile Include="Model\FDAProductInfo.cs" />
+    <Compile Include="Model\HCPCSInfo.cs" />
+    <Compile Include="Model\LabelerContact.cs" />
+    <Compile Include="Model\MRISafetyInfo.cs" />
     <Compile Include="Model\PackageInfo.cs" />
     <Compile Include="Model\SearchDevicesResponse.cs" />
     <Compile Include="Model\SizeInfo.cs" />
+    <Compile Include="Model\StorageInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
