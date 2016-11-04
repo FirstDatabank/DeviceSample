@@ -51,7 +51,8 @@ namespace DeviceSample
                 //Here is an example where you are searching and you don't necessarily know the type
                 //var request = "devices?searchText=08717648177583&searchType=Fuzzy&callSystemName=ConsoleAppExample";
 
-
+                //Here is an example where you can search between dates on the PrizmRevisionDate
+                //var request = "devices?SearchFilter=PrizmRevisionDate:[2016-10-27 TO 2016-10-28]"; 
 
 
                 //We always recommend calling API services asynchronously
