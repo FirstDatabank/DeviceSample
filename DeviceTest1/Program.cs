@@ -41,8 +41,8 @@ namespace DeviceSample
                 var request = "devices?limit=100&offset=1&callSystemName=ConsoleAppExample";
 
                 //OTHER EXAMPLES:
-                //Here is an example of searching for a GTIN_14
-                //var request = "devices?searchFilter=GTIN_14:10381780045854&callSystemName=ConsoleAppExample";
+                //Here is an example of searching for a GTIN14
+                //var request = "devices?searchFilter=GTIN14:10381780045854&callSystemName=ConsoleAppExample";
 
                 //Here is an example of searching for a HIBC
                 //var request = "devices?searchFilter=HIBC:H981038073560&callSystemName=ConsoleAppExample";
