@@ -49,15 +49,15 @@ namespace DeviceSample.Model
         /// <param name="GUDIDBrandName">Returns the GUDID Brand Name of the device.</param>
         /// <param name="GUDIDDescription">Returns the GUDID Description of the device.</param>
         /// <param name="LabelerName">Returns a standardized manufacturer or vendor name of the device.</param>
-        /// <param name="UDIDI">Returns the primary identifier issued by GS1, HIBCC, or ICCBBA to uniquely identify the device.</param>
+        /// <param name="UDI_DI">Returns the primary identifier issued by GS1, HIBCC, or ICCBBA to uniquely identify the device.</param>
         /// <param name="UDIDISecondary">Returns a secondary identifier issued by GS1, HIBCC, or ICCBBA to uniquely identify the device.</param>
         /// <param name="GTIN14">Returns Global Trade Identification Number assigned by GS1 for the device.</param>
         /// <param name="HIBC">Returns Healthcare Industry Bar Code assigned by HIBCC for the device.</param>
         /// <param name="ISBT128">Returns the International Society of Blood Transfusion.128 code assigned by ICCBBA for the device.</param>
         /// <param name="DeviceIdentifiers">Returns a list of device identifiers.</param>
         /// <param name="GUDIDVersionModelNumber">Returns the GUDID version model number of the device.</param>
-        /// <param name="VersionNumber">Returns the Labeler’s Version Number of the device.</param>
-        /// <param name="ModelNumber">Returns the Labeler’s Model Number of the device.</param>
+        /// <param name="VersionNumber">Returns the Labelerâ€™s Version Number of the device.</param>
+        /// <param name="ModelNumber">Returns the Labelerâ€™s Model Number of the device.</param>
         /// <param name="CatalogNumber">Returns an identifier assigned by the Labeler for use in product catalogs, product ordering and/or labeling; often referred to as an item number, reference number, product number or manufacturer number.</param>
         /// <param name="SizeInfo">Returns a list of clinical dimensions of the product.</param>
         /// <param name="BasePackageType">Returns the type of the base package.</param>
@@ -90,7 +90,7 @@ namespace DeviceSample.Model
         /// <param name="MRISafetyInfo">Returns the MRI Safety status of the device.  Valid MRISafetyLabel values are MR Safe, MR Unsafe, MR Conditional, Labeling does not contain MRI safety information; MRISafetyLabel of null &#x3D; information not available..</param>
         /// <param name="HumanCellTissue">Returns the Human Cell, Tissue, Cellular or Tissue-based status of the device: True &#x3D; indicates the device contains or consists of human cells or tissues that are intended for implantation, transplantation, infusion or transfer into a human recipient; False &#x3D; indicates the device does not contain human cells or tissues; Null &#x3D; information not available.</param>
         /// <param name="StorageInfo">Returns Storage and Handling information for the device, if it exists. Can include temperature, humidity and pressure for storage or handling and special storage conditions.  Can include a low or high threshold value or a range of values.  Null &#x3D; information not available..</param>
-        public Device(int? FDBDeviceId = null, string StandardDeviceName = null, string EnhancedDeviceName = null, string BrandName = null, string GUDIDBrandName = null, string GUDIDDescription = null, string LabelerName = null, string UDIDI = null, string UDIDISecondary = null, string GTIN14 = null, string HIBC = null, string ISBT128 = null, List<DeviceIdentifier> DeviceIdentifiers = null, string GUDIDVersionModelNumber = null, string VersionNumber = null, string ModelNumber = null, List<string> CatalogNumber = null, List<SizeInfo> SizeInfo = null, string BasePackageType = null, string BasePackageCount = null, List<PackageInfo> PackageInfo = null, List<DeviceCategory> DeviceCategories = null, int? StatusId = null, string StatusDesc = null, int? LotNumberControlCode = null, int? SerialNumberControlCode = null, int? ExpirationDateControlCode = null, int? ManufacturedDateControlCode = null, int? DonationIdNumberCode = null, List<string> AlternateLabelerNames = null, List<LabelerContact> LabelerContactInfo = null, string UDIDIPublishDate = null, string PrizmPublishDate = null, string PrizmRevisionDate = null, bool? Prescription = null, bool? OverTheCounter = null, bool? DeviceIsAKit = null, bool? SingleUse = null, bool? PackagedSterile = null, bool? RequiresSterilizationPriorUse = null, List<string> SterilizationMethods = null, bool? ContainsLatex = null, bool? CombinationProduct = null, List<HCPCSInfo> HCPCSInfo = null, List<FDAProductInfo> FDAProductInfo = null, List<MRISafetyInfo> MRISafetyInfo = null, bool? HumanCellTissue = null, List<StorageInfo> StorageInfo = null)
+        public Device(int? FDBDeviceId = null, string StandardDeviceName = null, string EnhancedDeviceName = null, string BrandName = null, string GUDIDBrandName = null, string GUDIDDescription = null, string LabelerName = null, string UDI_DI = null, string UDIDISecondary = null, string GTIN14 = null, string HIBC = null, string ISBT128 = null, List<DeviceIdentifier> DeviceIdentifiers = null, string GUDIDVersionModelNumber = null, string VersionNumber = null, string ModelNumber = null, List<string> CatalogNumber = null, List<SizeInfo> SizeInfo = null, string BasePackageType = null, string BasePackageCount = null, List<PackageInfo> PackageInfo = null, List<DeviceCategory> DeviceCategories = null, int? StatusId = null, string StatusDesc = null, int? LotNumberControlCode = null, int? SerialNumberControlCode = null, int? ExpirationDateControlCode = null, int? ManufacturedDateControlCode = null, int? DonationIdNumberCode = null, List<string> AlternateLabelerNames = null, List<LabelerContact> LabelerContactInfo = null, string UDIDIPublishDate = null, string PrizmPublishDate = null, string PrizmRevisionDate = null, bool? Prescription = null, bool? OverTheCounter = null, bool? DeviceIsAKit = null, bool? SingleUse = null, bool? PackagedSterile = null, bool? RequiresSterilizationPriorUse = null, List<string> SterilizationMethods = null, bool? ContainsLatex = null, bool? CombinationProduct = null, List<HCPCSInfo> HCPCSInfo = null, List<FDAProductInfo> FDAProductInfo = null, List<MRISafetyInfo> MRISafetyInfo = null, bool? HumanCellTissue = null, List<StorageInfo> StorageInfo = null)
         {
             this.FDBDeviceId = FDBDeviceId;
             this.StandardDeviceName = StandardDeviceName;
@@ -99,7 +99,7 @@ namespace DeviceSample.Model
             this.GUDIDBrandName = GUDIDBrandName;
             this.GUDIDDescription = GUDIDDescription;
             this.LabelerName = LabelerName;
-            this.UDIDI = UDIDI;
+            this.UDI_DI = UDI_DI;
             this.UDIDISecondary = UDIDISecondary;
             this.GTIN14 = GTIN14;
             this.HIBC = HIBC;
@@ -188,19 +188,19 @@ namespace DeviceSample.Model
         /// Returns the primary identifier issued by GS1, HIBCC, or ICCBBA to uniquely identify the device
         /// </summary>
         /// <value>Returns the primary identifier issued by GS1, HIBCC, or ICCBBA to uniquely identify the device</value>
-        [DataMember(Name = "UDIDI", EmitDefaultValue = false)]
-        public string UDIDI { get; set; }
+        [DataMember(Name = "UDI_DI", EmitDefaultValue = false)]
+        public string UDI_DI { get; set; }
         /// <summary>
         /// Returns a secondary identifier issued by GS1, HIBCC, or ICCBBA to uniquely identify the device
         /// </summary>
         /// <value>Returns a secondary identifier issued by GS1, HIBCC, or ICCBBA to uniquely identify the device</value>
-        [DataMember(Name = "UDIDISecondary", EmitDefaultValue = false)]
+        [DataMember(Name = "UDI_DI_Secondary", EmitDefaultValue = false)]
         public string UDIDISecondary { get; set; }
         /// <summary>
         /// Returns Global Trade Identification Number assigned by GS1 for the device
         /// </summary>
         /// <value>Returns Global Trade Identification Number assigned by GS1 for the device</value>
-        [DataMember(Name = "GTIN14", EmitDefaultValue = false)]
+        [DataMember(Name = "GTIN_14", EmitDefaultValue = false)]
         public string GTIN14 { get; set; }
         /// <summary>
         /// Returns Healthcare Industry Bar Code assigned by HIBCC for the device
@@ -212,7 +212,7 @@ namespace DeviceSample.Model
         /// Returns the International Society of Blood Transfusion.128 code assigned by ICCBBA for the device
         /// </summary>
         /// <value>Returns the International Society of Blood Transfusion.128 code assigned by ICCBBA for the device</value>
-        [DataMember(Name = "ISBT128", EmitDefaultValue = false)]
+        [DataMember(Name = "ISBT_128", EmitDefaultValue = false)]
         public string ISBT128 { get; set; }
         /// <summary>
         /// Returns a list of device identifiers
@@ -227,15 +227,15 @@ namespace DeviceSample.Model
         [DataMember(Name = "GUDIDVersionModelNumber", EmitDefaultValue = false)]
         public string GUDIDVersionModelNumber { get; set; }
         /// <summary>
-        /// Returns the Labeler’s Version Number of the device
+        /// Returns the Labelerâ€™s Version Number of the device
         /// </summary>
-        /// <value>Returns the Labeler’s Version Number of the device</value>
+        /// <value>Returns the Labelerâ€™s Version Number of the device</value>
         [DataMember(Name = "VersionNumber", EmitDefaultValue = false)]
         public string VersionNumber { get; set; }
         /// <summary>
-        /// Returns the Labeler’s Model Number of the device
+        /// Returns the Labelerâ€™s Model Number of the device
         /// </summary>
-        /// <value>Returns the Labeler’s Model Number of the device</value>
+        /// <value>Returns the Labelerâ€™s Model Number of the device</value>
         [DataMember(Name = "ModelNumber", EmitDefaultValue = false)]
         public string ModelNumber { get; set; }
         /// <summary>
@@ -445,7 +445,7 @@ namespace DeviceSample.Model
             sb.Append("  GUDIDBrandName: ").Append(GUDIDBrandName).Append("\n");
             sb.Append("  GUDIDDescription: ").Append(GUDIDDescription).Append("\n");
             sb.Append("  LabelerName: ").Append(LabelerName).Append("\n");
-            sb.Append("  UDIDI: ").Append(UDIDI).Append("\n");
+            sb.Append("  UDI_DI: ").Append(UDI_DI).Append("\n");
             sb.Append("  UDIDISecondary: ").Append(UDIDISecondary).Append("\n");
             sb.Append("  GTIN14: ").Append(GTIN14).Append("\n");
             sb.Append("  HIBC: ").Append(HIBC).Append("\n");
@@ -558,9 +558,9 @@ namespace DeviceSample.Model
                     this.LabelerName.Equals(other.LabelerName)
                 ) &&
                 (
-                    this.UDIDI == other.UDIDI ||
-                    this.UDIDI != null &&
-                    this.UDIDI.Equals(other.UDIDI)
+                    this.UDI_DI == other.UDI_DI ||
+                    this.UDI_DI != null &&
+                    this.UDI_DI.Equals(other.UDI_DI)
                 ) &&
                 (
                     this.UDIDISecondary == other.UDIDISecondary ||
@@ -789,8 +789,8 @@ namespace DeviceSample.Model
                     hash = hash * 59 + this.GUDIDDescription.GetHashCode();
                 if (this.LabelerName != null)
                     hash = hash * 59 + this.LabelerName.GetHashCode();
-                if (this.UDIDI != null)
-                    hash = hash * 59 + this.UDIDI.GetHashCode();
+                if (this.UDI_DI != null)
+                    hash = hash * 59 + this.UDI_DI.GetHashCode();
                 if (this.UDIDISecondary != null)
                     hash = hash * 59 + this.UDIDISecondary.GetHashCode();
                 if (this.GTIN14 != null)
