@@ -20,7 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace DeviceSearch.Model
+namespace DeviceSample.Model
 {
     /// <summary>
     /// Returns the HCPCS information

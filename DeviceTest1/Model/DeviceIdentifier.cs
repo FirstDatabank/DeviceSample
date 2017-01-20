@@ -21,7 +21,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace DeviceSearch.Model
+namespace DeviceSample.Model
 {
     /// <summary>
     /// Returns the device identifiers from various sources

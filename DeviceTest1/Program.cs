@@ -81,7 +81,7 @@ namespace DeviceSample
                     //well as the Id that was chosen, and the action that was taken on it.  In this case, we don't have the stable
                     //FDBId for devices out there yet, so just send back the name of the device selected.
                     //This can be a fire and forget method, so it does not need to impact the performance of your app
-                    SendFeedback(r.SeviceCallId, r.Items[0].StandardDeviceName, SearchAction.selected);
+                    SendFeedback(r.ServiceCallId, r.Items[0].StandardDeviceName, SearchAction.selected);
                 }
                 else
                 {

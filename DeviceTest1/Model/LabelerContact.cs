@@ -21,7 +21,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace DeviceSearch.Model
+namespace DeviceSample.Model
 {
     /// <summary>
     /// Returns the contact information for the labeler of the device, if it exists; this data is not validated
