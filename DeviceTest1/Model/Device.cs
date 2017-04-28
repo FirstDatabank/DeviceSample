@@ -62,7 +62,7 @@ namespace DeviceSample.Model
         /// <param name="UDIDIPublishDate">UDIDIPublishDate.</param>
         /// <param name="PrizmPublishDate">PrizmPublishDate.</param>
         /// <param name="PrizmRevisionDate">PrizmRevisionDate.</param>
-        /// <param name="PrizmEndDate">PrizmPublishDate.</param>
+        /// <param name="PrizmEndDate">PrizmEndDate.</param>
         /// <param name="Prescription">Prescription.</param>
         /// <param name="OverTheCounter">OverTheCounter.</param>
         /// <param name="DeviceIsAKit">DeviceIsAKit.</param>
