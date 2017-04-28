@@ -62,6 +62,7 @@ namespace DeviceSample.Model
         /// <param name="UDIDIPublishDate">UDIDIPublishDate.</param>
         /// <param name="PrizmPublishDate">PrizmPublishDate.</param>
         /// <param name="PrizmRevisionDate">PrizmRevisionDate.</param>
+        /// <param name="PrizmEndDate">PrizmPublishDate.</param>
         /// <param name="Prescription">Prescription.</param>
         /// <param name="OverTheCounter">OverTheCounter.</param>
         /// <param name="DeviceIsAKit">DeviceIsAKit.</param>
@@ -117,6 +118,7 @@ namespace DeviceSample.Model
             this.UDIDIPublishDate = UDIDIPublishDate;
             this.PrizmPublishDate = PrizmPublishDate;
             this.PrizmRevisionDate = PrizmRevisionDate;
+            this.PrizmEndDate = PrizmEndDate;
             this.Prescription = Prescription;
             this.OverTheCounter = OverTheCounter;
             this.DeviceIsAKit = DeviceIsAKit;
@@ -353,6 +355,12 @@ namespace DeviceSample.Model
         public string PrizmRevisionDate { get; set; }
 
         /// <summary>
+        /// Gets or Sets PrizmEndDate
+        /// </summary>
+        [DataMember(Name = "PrizmEndDate", EmitDefaultValue = false)]
+        public string PrizmEndDate { get; set; }
+
+        /// <summary>
         /// Gets or Sets Prescription
         /// </summary>
         [DataMember(Name = "Prescription", EmitDefaultValue = false)]
@@ -498,6 +506,7 @@ namespace DeviceSample.Model
             sb.Append("  UDIDIPublishDate: ").Append(UDIDIPublishDate).Append("\n");
             sb.Append("  PrizmPublishDate: ").Append(PrizmPublishDate).Append("\n");
             sb.Append("  PrizmRevisionDate: ").Append(PrizmRevisionDate).Append("\n");
+            sb.Append("  PrizmEndDate: ").Append(PrizmEndDate).Append("\n");
             sb.Append("  Prescription: ").Append(Prescription).Append("\n");
             sb.Append("  OverTheCounter: ").Append(OverTheCounter).Append("\n");
             sb.Append("  DeviceIsAKit: ").Append(DeviceIsAKit).Append("\n");
@@ -732,6 +741,11 @@ namespace DeviceSample.Model
                     this.PrizmRevisionDate.Equals(other.PrizmRevisionDate)
                 ) &&
                 (
+                    this.PrizmEndDate == other.PrizmEndDate ||
+                    this.PrizmEndDate != null &&
+                    this.PrizmEndDate.Equals(other.PrizmEndDate)
+                ) &&
+                (
                     this.Prescription == other.Prescription ||
                     this.Prescription != null &&
                     this.Prescription.Equals(other.Prescription)
@@ -901,6 +915,8 @@ namespace DeviceSample.Model
                     hash = hash * 59 + this.PrizmPublishDate.GetHashCode();
                 if (this.PrizmRevisionDate != null)
                     hash = hash * 59 + this.PrizmRevisionDate.GetHashCode();
+                if (this.PrizmEndDate != null)
+                    hash = hash * 59 + this.PrizmEndDate.GetHashCode();
                 if (this.Prescription != null)
                     hash = hash * 59 + this.Prescription.GetHashCode();
                 if (this.OverTheCounter != null)

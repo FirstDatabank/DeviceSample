@@ -24,15 +24,23 @@ namespace DeviceSample.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DeviceCategory" /> class.
         /// </summary>
+        /// <param name="CategoryId">CategoryName.</param>
         /// <param name="CategoryName">CategoryName.</param>
         /// <param name="CategoryType">CategoryType.</param>
         /// <param name="CategoryCode">CategoryCode.</param>
-        public DeviceCategory(string CategoryName = default(string), string CategoryType = default(string), string CategoryCode = default(string))
+        public DeviceCategory(string CategoryId = default(string), string CategoryName = default(string), string CategoryType = default(string), string CategoryCode = default(string))
         {
+            this.CategoryId = CategoryId;
             this.CategoryName = CategoryName;
             this.CategoryType = CategoryType;
             this.CategoryCode = CategoryCode;
         }
+
+        /// <summary>
+        /// Gets or Sets CategoryName
+        /// </summary>
+        [DataMember(Name = "CategoryId", EmitDefaultValue = false)]
+        public string CategoryId { get; set; }
 
         /// <summary>
         /// Gets or Sets CategoryName
@@ -60,6 +68,7 @@ namespace DeviceSample.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DeviceCategory {\n");
+            sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
             sb.Append("  CategoryName: ").Append(CategoryName).Append("\n");
             sb.Append("  CategoryType: ").Append(CategoryType).Append("\n");
             sb.Append("  CategoryCode: ").Append(CategoryCode).Append("\n");
@@ -100,6 +109,11 @@ namespace DeviceSample.Model
 
             return
                 (
+                    this.CategoryId == other.CategoryId ||
+                    this.CategoryId != null &&
+                    this.CategoryId.Equals(other.CategoryId)
+                ) &&
+                (
                     this.CategoryName == other.CategoryName ||
                     this.CategoryName != null &&
                     this.CategoryName.Equals(other.CategoryName)
@@ -127,6 +141,8 @@ namespace DeviceSample.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.CategoryId != null)
+                    hash = hash * 59 + this.CategoryId.GetHashCode();
                 if (this.CategoryName != null)
                     hash = hash * 59 + this.CategoryName.GetHashCode();
                 if (this.CategoryType != null)
