@@ -42,20 +42,20 @@ namespace DeviceSample
 
                 //OTHER EXAMPLES:
                 //Here is an example of searching for a GTIN_14
-                //var request = "devices?searchFilter=GTIN_14:00505519697267&callSystemName=ConsoleAppExample";
+                //var request = "devices?searchFilter=GTIN_14:09420012421777&callSystemName=ConsoleAppExample";
 
                 //Here is an example of searching for a HIBC
-                //var request = "devices?searchFilter=HIBC:H476724041361&callSystemName=ConsoleAppExample";
+                //var request = "devices?searchFilter=HIBC:H67141496090&callSystemName=ConsoleAppExample";
 
                 //Here is an example of searching for any identifier (GTIN, HIBC, NDC/NHRIC, UPN etc.)
-                //var request = "devices?searchFilter=ExternalDeviceId:H476724041361&callSystemName=ConsoleAppExample";
+                //var request = "devices?searchFilter=ExternalDeviceId:H67141496090&callSystemName=ConsoleAppExample";
 
 
                 //Here is an example where you are searching and you don't necessarily know the type
-                //var request = "devices?searchText=H476724041361&searchType=Fuzzy&callSystemName=ConsoleAppExample";
+                //var request = "devices?searchText=H67141496090&searchType=Fuzzy&callSystemName=ConsoleAppExample";
 
                 //Here is an example where you can search between dates on the PrizmRevisionDate
-                //var request = "devices?SearchFilter=PrizmRevisionDate:[2016-10-27 TO 2016-10-28]"; 
+                //var request = "devices?SearchFilter=PrizmRevisionDate:[2017-01-05 TO 2017-01-10]"; 
 
 
                 //We always recommend calling API services asynchronously
@@ -81,7 +81,14 @@ namespace DeviceSample
                     //well as the Id that was chosen, and the action that was taken on it.  In this case, we don't have the stable
                     //FDBId for devices out there yet, so just send back the name of the device selected.
                     //This can be a fire and forget method, so it does not need to impact the performance of your app
-                    SendFeedback(r.ServiceCallId, r.Items[0].StandardDeviceName, SearchAction.selected);
+                    if (r.Items.Count > 0)
+                    {
+                        SendFeedback(r.ServiceCallId, r.Items[0].StandardDeviceName, SearchAction.selected);
+                    }
+                    else
+                    {
+                        Console.WriteLine("No Records found with the search criteria.");
+                    }
                 }
                 else
                 {
