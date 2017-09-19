@@ -18,33 +18,41 @@ using System.ComponentModel.DataAnnotations;
 namespace DeviceSample.Model
 {
     /// <summary>
-    /// MRISafetyInfo
+    /// Contact
     /// </summary>
     [DataContract]
-    public partial class MRISafetyInfo :  IEquatable<MRISafetyInfo>, IValidatableObject
+    public partial class Contact :  IEquatable<Contact>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MRISafetyInfo" /> class.
+        /// Initializes a new instance of the <see cref="Contact" /> class.
         /// </summary>
-        /// <param name="MRISafetyLabel">MRISafetyLabel.</param>
-        /// <param name="MRISafetySource">MRISafetySource.</param>
-        public MRISafetyInfo(string MRISafetyLabel = default(string), string MRISafetySource = default(string))
+        /// <param name="Email">Email.</param>
+        /// <param name="Phone">Phone.</param>
+        /// <param name="Extension">Extension.</param>
+        public Contact(string Email = default(string), string Phone = default(string), string Extension = default(string))
         {
-            this.MRISafetyLabel = MRISafetyLabel;
-            this.MRISafetySource = MRISafetySource;
+            this.Email = Email;
+            this.Phone = Phone;
+            this.Extension = Extension;
         }
         
         /// <summary>
-        /// Gets or Sets MRISafetyLabel
+        /// Gets or Sets Email
         /// </summary>
-        [DataMember(Name="MRISafetyLabel", EmitDefaultValue=false)]
-        public string MRISafetyLabel { get; set; }
+        [DataMember(Name="Email", EmitDefaultValue=false)]
+        public string Email { get; set; }
 
         /// <summary>
-        /// Gets or Sets MRISafetySource
+        /// Gets or Sets Phone
         /// </summary>
-        [DataMember(Name="MRISafetySource", EmitDefaultValue=false)]
-        public string MRISafetySource { get; set; }
+        [DataMember(Name="Phone", EmitDefaultValue=false)]
+        public string Phone { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Extension
+        /// </summary>
+        [DataMember(Name="Extension", EmitDefaultValue=false)]
+        public string Extension { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,9 +61,10 @@ namespace DeviceSample.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class MRISafetyInfo {\n");
-            sb.Append("  MRISafetyLabel: ").Append(MRISafetyLabel).Append("\n");
-            sb.Append("  MRISafetySource: ").Append(MRISafetySource).Append("\n");
+            sb.Append("class Contact {\n");
+            sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  Phone: ").Append(Phone).Append("\n");
+            sb.Append("  Extension: ").Append(Extension).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -77,15 +86,15 @@ namespace DeviceSample.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as MRISafetyInfo);
+            return this.Equals(obj as Contact);
         }
 
         /// <summary>
-        /// Returns true if MRISafetyInfo instances are equal
+        /// Returns true if Contact instances are equal
         /// </summary>
-        /// <param name="other">Instance of MRISafetyInfo to be compared</param>
+        /// <param name="other">Instance of Contact to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MRISafetyInfo other)
+        public bool Equals(Contact other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -93,14 +102,19 @@ namespace DeviceSample.Model
 
             return 
                 (
-                    this.MRISafetyLabel == other.MRISafetyLabel ||
-                    this.MRISafetyLabel != null &&
-                    this.MRISafetyLabel.Equals(other.MRISafetyLabel)
+                    this.Email == other.Email ||
+                    this.Email != null &&
+                    this.Email.Equals(other.Email)
                 ) && 
                 (
-                    this.MRISafetySource == other.MRISafetySource ||
-                    this.MRISafetySource != null &&
-                    this.MRISafetySource.Equals(other.MRISafetySource)
+                    this.Phone == other.Phone ||
+                    this.Phone != null &&
+                    this.Phone.Equals(other.Phone)
+                ) && 
+                (
+                    this.Extension == other.Extension ||
+                    this.Extension != null &&
+                    this.Extension.Equals(other.Extension)
                 );
         }
 
@@ -115,10 +129,12 @@ namespace DeviceSample.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.MRISafetyLabel != null)
-                    hash = hash * 59 + this.MRISafetyLabel.GetHashCode();
-                if (this.MRISafetySource != null)
-                    hash = hash * 59 + this.MRISafetySource.GetHashCode();
+                if (this.Email != null)
+                    hash = hash * 59 + this.Email.GetHashCode();
+                if (this.Phone != null)
+                    hash = hash * 59 + this.Phone.GetHashCode();
+                if (this.Extension != null)
+                    hash = hash * 59 + this.Extension.GetHashCode();
                 return hash;
             }
         }

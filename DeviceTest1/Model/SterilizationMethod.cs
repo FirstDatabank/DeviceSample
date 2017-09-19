@@ -18,33 +18,25 @@ using System.ComponentModel.DataAnnotations;
 namespace DeviceSample.Model
 {
     /// <summary>
-    /// MRISafetyInfo
+    /// SterilizationMethod
     /// </summary>
     [DataContract]
-    public partial class MRISafetyInfo :  IEquatable<MRISafetyInfo>, IValidatableObject
+    public partial class SterilizationMethod :  IEquatable<SterilizationMethod>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MRISafetyInfo" /> class.
+        /// Initializes a new instance of the <see cref="SterilizationMethod" /> class.
         /// </summary>
-        /// <param name="MRISafetyLabel">MRISafetyLabel.</param>
-        /// <param name="MRISafetySource">MRISafetySource.</param>
-        public MRISafetyInfo(string MRISafetyLabel = default(string), string MRISafetySource = default(string))
+        /// <param name="SterilizationMethodDesc">SterilizationMethodDesc.</param>
+        public SterilizationMethod(string SterilizationMethodDesc = default(string))
         {
-            this.MRISafetyLabel = MRISafetyLabel;
-            this.MRISafetySource = MRISafetySource;
+            this.SterilizationMethodDesc = SterilizationMethodDesc;
         }
         
         /// <summary>
-        /// Gets or Sets MRISafetyLabel
+        /// Gets or Sets SterilizationMethodDesc
         /// </summary>
-        [DataMember(Name="MRISafetyLabel", EmitDefaultValue=false)]
-        public string MRISafetyLabel { get; set; }
-
-        /// <summary>
-        /// Gets or Sets MRISafetySource
-        /// </summary>
-        [DataMember(Name="MRISafetySource", EmitDefaultValue=false)]
-        public string MRISafetySource { get; set; }
+        [DataMember(Name="SterilizationMethodDesc", EmitDefaultValue=false)]
+        public string SterilizationMethodDesc { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,9 +45,8 @@ namespace DeviceSample.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class MRISafetyInfo {\n");
-            sb.Append("  MRISafetyLabel: ").Append(MRISafetyLabel).Append("\n");
-            sb.Append("  MRISafetySource: ").Append(MRISafetySource).Append("\n");
+            sb.Append("class SterilizationMethod {\n");
+            sb.Append("  SterilizationMethodDesc: ").Append(SterilizationMethodDesc).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -77,15 +68,15 @@ namespace DeviceSample.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as MRISafetyInfo);
+            return this.Equals(obj as SterilizationMethod);
         }
 
         /// <summary>
-        /// Returns true if MRISafetyInfo instances are equal
+        /// Returns true if SterilizationMethod instances are equal
         /// </summary>
-        /// <param name="other">Instance of MRISafetyInfo to be compared</param>
+        /// <param name="other">Instance of SterilizationMethod to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MRISafetyInfo other)
+        public bool Equals(SterilizationMethod other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -93,14 +84,9 @@ namespace DeviceSample.Model
 
             return 
                 (
-                    this.MRISafetyLabel == other.MRISafetyLabel ||
-                    this.MRISafetyLabel != null &&
-                    this.MRISafetyLabel.Equals(other.MRISafetyLabel)
-                ) && 
-                (
-                    this.MRISafetySource == other.MRISafetySource ||
-                    this.MRISafetySource != null &&
-                    this.MRISafetySource.Equals(other.MRISafetySource)
+                    this.SterilizationMethodDesc == other.SterilizationMethodDesc ||
+                    this.SterilizationMethodDesc != null &&
+                    this.SterilizationMethodDesc.Equals(other.SterilizationMethodDesc)
                 );
         }
 
@@ -115,10 +101,8 @@ namespace DeviceSample.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.MRISafetyLabel != null)
-                    hash = hash * 59 + this.MRISafetyLabel.GetHashCode();
-                if (this.MRISafetySource != null)
-                    hash = hash * 59 + this.MRISafetySource.GetHashCode();
+                if (this.SterilizationMethodDesc != null)
+                    hash = hash * 59 + this.SterilizationMethodDesc.GetHashCode();
                 return hash;
             }
         }

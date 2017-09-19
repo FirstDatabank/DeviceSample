@@ -18,33 +18,25 @@ using System.ComponentModel.DataAnnotations;
 namespace DeviceSample.Model
 {
     /// <summary>
-    /// MRISafetyInfo
+    /// CompanyAlias
     /// </summary>
     [DataContract]
-    public partial class MRISafetyInfo :  IEquatable<MRISafetyInfo>, IValidatableObject
+    public partial class CompanyAlias :  IEquatable<CompanyAlias>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MRISafetyInfo" /> class.
+        /// Initializes a new instance of the <see cref="CompanyAlias" /> class.
         /// </summary>
-        /// <param name="MRISafetyLabel">MRISafetyLabel.</param>
-        /// <param name="MRISafetySource">MRISafetySource.</param>
-        public MRISafetyInfo(string MRISafetyLabel = default(string), string MRISafetySource = default(string))
+        /// <param name="CompanyAliasName">CompanyAliasName.</param>
+        public CompanyAlias(string CompanyAliasName = default(string))
         {
-            this.MRISafetyLabel = MRISafetyLabel;
-            this.MRISafetySource = MRISafetySource;
+            this.CompanyAliasName = CompanyAliasName;
         }
         
         /// <summary>
-        /// Gets or Sets MRISafetyLabel
+        /// Gets or Sets CompanyAliasName
         /// </summary>
-        [DataMember(Name="MRISafetyLabel", EmitDefaultValue=false)]
-        public string MRISafetyLabel { get; set; }
-
-        /// <summary>
-        /// Gets or Sets MRISafetySource
-        /// </summary>
-        [DataMember(Name="MRISafetySource", EmitDefaultValue=false)]
-        public string MRISafetySource { get; set; }
+        [DataMember(Name="CompanyAliasName", EmitDefaultValue=false)]
+        public string CompanyAliasName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,9 +45,8 @@ namespace DeviceSample.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class MRISafetyInfo {\n");
-            sb.Append("  MRISafetyLabel: ").Append(MRISafetyLabel).Append("\n");
-            sb.Append("  MRISafetySource: ").Append(MRISafetySource).Append("\n");
+            sb.Append("class CompanyAlias {\n");
+            sb.Append("  CompanyAliasName: ").Append(CompanyAliasName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -77,15 +68,15 @@ namespace DeviceSample.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as MRISafetyInfo);
+            return this.Equals(obj as CompanyAlias);
         }
 
         /// <summary>
-        /// Returns true if MRISafetyInfo instances are equal
+        /// Returns true if CompanyAlias instances are equal
         /// </summary>
-        /// <param name="other">Instance of MRISafetyInfo to be compared</param>
+        /// <param name="other">Instance of CompanyAlias to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MRISafetyInfo other)
+        public bool Equals(CompanyAlias other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -93,14 +84,9 @@ namespace DeviceSample.Model
 
             return 
                 (
-                    this.MRISafetyLabel == other.MRISafetyLabel ||
-                    this.MRISafetyLabel != null &&
-                    this.MRISafetyLabel.Equals(other.MRISafetyLabel)
-                ) && 
-                (
-                    this.MRISafetySource == other.MRISafetySource ||
-                    this.MRISafetySource != null &&
-                    this.MRISafetySource.Equals(other.MRISafetySource)
+                    this.CompanyAliasName == other.CompanyAliasName ||
+                    this.CompanyAliasName != null &&
+                    this.CompanyAliasName.Equals(other.CompanyAliasName)
                 );
         }
 
@@ -115,10 +101,8 @@ namespace DeviceSample.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.MRISafetyLabel != null)
-                    hash = hash * 59 + this.MRISafetyLabel.GetHashCode();
-                if (this.MRISafetySource != null)
-                    hash = hash * 59 + this.MRISafetySource.GetHashCode();
+                if (this.CompanyAliasName != null)
+                    hash = hash * 59 + this.CompanyAliasName.GetHashCode();
                 return hash;
             }
         }

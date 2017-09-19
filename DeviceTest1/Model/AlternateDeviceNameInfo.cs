@@ -18,33 +18,25 @@ using System.ComponentModel.DataAnnotations;
 namespace DeviceSample.Model
 {
     /// <summary>
-    /// MRISafetyInfo
+    /// AlternateDeviceNameInfo
     /// </summary>
     [DataContract]
-    public partial class MRISafetyInfo :  IEquatable<MRISafetyInfo>, IValidatableObject
+    public partial class AlternateDeviceNameInfo :  IEquatable<AlternateDeviceNameInfo>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MRISafetyInfo" /> class.
+        /// Initializes a new instance of the <see cref="AlternateDeviceNameInfo" /> class.
         /// </summary>
-        /// <param name="MRISafetyLabel">MRISafetyLabel.</param>
-        /// <param name="MRISafetySource">MRISafetySource.</param>
-        public MRISafetyInfo(string MRISafetyLabel = default(string), string MRISafetySource = default(string))
+        /// <param name="AlternateDeviceName">AlternateDeviceName.</param>
+        public AlternateDeviceNameInfo(string AlternateDeviceName = default(string))
         {
-            this.MRISafetyLabel = MRISafetyLabel;
-            this.MRISafetySource = MRISafetySource;
+            this.AlternateDeviceName = AlternateDeviceName;
         }
         
         /// <summary>
-        /// Gets or Sets MRISafetyLabel
+        /// Gets or Sets AlternateDeviceName
         /// </summary>
-        [DataMember(Name="MRISafetyLabel", EmitDefaultValue=false)]
-        public string MRISafetyLabel { get; set; }
-
-        /// <summary>
-        /// Gets or Sets MRISafetySource
-        /// </summary>
-        [DataMember(Name="MRISafetySource", EmitDefaultValue=false)]
-        public string MRISafetySource { get; set; }
+        [DataMember(Name="AlternateDeviceName", EmitDefaultValue=false)]
+        public string AlternateDeviceName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,9 +45,8 @@ namespace DeviceSample.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class MRISafetyInfo {\n");
-            sb.Append("  MRISafetyLabel: ").Append(MRISafetyLabel).Append("\n");
-            sb.Append("  MRISafetySource: ").Append(MRISafetySource).Append("\n");
+            sb.Append("class AlternateDeviceNameInfo {\n");
+            sb.Append("  AlternateDeviceName: ").Append(AlternateDeviceName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -77,15 +68,15 @@ namespace DeviceSample.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as MRISafetyInfo);
+            return this.Equals(obj as AlternateDeviceNameInfo);
         }
 
         /// <summary>
-        /// Returns true if MRISafetyInfo instances are equal
+        /// Returns true if AlternateDeviceNameInfo instances are equal
         /// </summary>
-        /// <param name="other">Instance of MRISafetyInfo to be compared</param>
+        /// <param name="other">Instance of AlternateDeviceNameInfo to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MRISafetyInfo other)
+        public bool Equals(AlternateDeviceNameInfo other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -93,14 +84,9 @@ namespace DeviceSample.Model
 
             return 
                 (
-                    this.MRISafetyLabel == other.MRISafetyLabel ||
-                    this.MRISafetyLabel != null &&
-                    this.MRISafetyLabel.Equals(other.MRISafetyLabel)
-                ) && 
-                (
-                    this.MRISafetySource == other.MRISafetySource ||
-                    this.MRISafetySource != null &&
-                    this.MRISafetySource.Equals(other.MRISafetySource)
+                    this.AlternateDeviceName == other.AlternateDeviceName ||
+                    this.AlternateDeviceName != null &&
+                    this.AlternateDeviceName.Equals(other.AlternateDeviceName)
                 );
         }
 
@@ -115,10 +101,8 @@ namespace DeviceSample.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.MRISafetyLabel != null)
-                    hash = hash * 59 + this.MRISafetyLabel.GetHashCode();
-                if (this.MRISafetySource != null)
-                    hash = hash * 59 + this.MRISafetySource.GetHashCode();
+                if (this.AlternateDeviceName != null)
+                    hash = hash * 59 + this.AlternateDeviceName.GetHashCode();
                 return hash;
             }
         }

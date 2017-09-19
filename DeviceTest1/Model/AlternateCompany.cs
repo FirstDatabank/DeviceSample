@@ -18,33 +18,33 @@ using System.ComponentModel.DataAnnotations;
 namespace DeviceSample.Model
 {
     /// <summary>
-    /// MRISafetyInfo
+    /// AlternateCompany
     /// </summary>
     [DataContract]
-    public partial class MRISafetyInfo :  IEquatable<MRISafetyInfo>, IValidatableObject
+    public partial class AlternateCompany :  IEquatable<AlternateCompany>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MRISafetyInfo" /> class.
+        /// Initializes a new instance of the <see cref="AlternateCompany" /> class.
         /// </summary>
-        /// <param name="MRISafetyLabel">MRISafetyLabel.</param>
-        /// <param name="MRISafetySource">MRISafetySource.</param>
-        public MRISafetyInfo(string MRISafetyLabel = default(string), string MRISafetySource = default(string))
+        /// <param name="AlternateCompanyId">AlternateCompanyId.</param>
+        /// <param name="AlternateCompanyName">AlternateCompanyName.</param>
+        public AlternateCompany(int? AlternateCompanyId = default(int?), string AlternateCompanyName = default(string))
         {
-            this.MRISafetyLabel = MRISafetyLabel;
-            this.MRISafetySource = MRISafetySource;
+            this.AlternateCompanyId = AlternateCompanyId;
+            this.AlternateCompanyName = AlternateCompanyName;
         }
         
         /// <summary>
-        /// Gets or Sets MRISafetyLabel
+        /// Gets or Sets AlternateCompanyId
         /// </summary>
-        [DataMember(Name="MRISafetyLabel", EmitDefaultValue=false)]
-        public string MRISafetyLabel { get; set; }
+        [DataMember(Name="AlternateCompanyId", EmitDefaultValue=false)]
+        public int? AlternateCompanyId { get; set; }
 
         /// <summary>
-        /// Gets or Sets MRISafetySource
+        /// Gets or Sets AlternateCompanyName
         /// </summary>
-        [DataMember(Name="MRISafetySource", EmitDefaultValue=false)]
-        public string MRISafetySource { get; set; }
+        [DataMember(Name="AlternateCompanyName", EmitDefaultValue=false)]
+        public string AlternateCompanyName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,9 +53,9 @@ namespace DeviceSample.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class MRISafetyInfo {\n");
-            sb.Append("  MRISafetyLabel: ").Append(MRISafetyLabel).Append("\n");
-            sb.Append("  MRISafetySource: ").Append(MRISafetySource).Append("\n");
+            sb.Append("class AlternateCompany {\n");
+            sb.Append("  AlternateCompanyId: ").Append(AlternateCompanyId).Append("\n");
+            sb.Append("  AlternateCompanyName: ").Append(AlternateCompanyName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -77,15 +77,15 @@ namespace DeviceSample.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as MRISafetyInfo);
+            return this.Equals(obj as AlternateCompany);
         }
 
         /// <summary>
-        /// Returns true if MRISafetyInfo instances are equal
+        /// Returns true if AlternateCompany instances are equal
         /// </summary>
-        /// <param name="other">Instance of MRISafetyInfo to be compared</param>
+        /// <param name="other">Instance of AlternateCompany to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MRISafetyInfo other)
+        public bool Equals(AlternateCompany other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -93,14 +93,14 @@ namespace DeviceSample.Model
 
             return 
                 (
-                    this.MRISafetyLabel == other.MRISafetyLabel ||
-                    this.MRISafetyLabel != null &&
-                    this.MRISafetyLabel.Equals(other.MRISafetyLabel)
+                    this.AlternateCompanyId == other.AlternateCompanyId ||
+                    this.AlternateCompanyId != null &&
+                    this.AlternateCompanyId.Equals(other.AlternateCompanyId)
                 ) && 
                 (
-                    this.MRISafetySource == other.MRISafetySource ||
-                    this.MRISafetySource != null &&
-                    this.MRISafetySource.Equals(other.MRISafetySource)
+                    this.AlternateCompanyName == other.AlternateCompanyName ||
+                    this.AlternateCompanyName != null &&
+                    this.AlternateCompanyName.Equals(other.AlternateCompanyName)
                 );
         }
 
@@ -115,10 +115,10 @@ namespace DeviceSample.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.MRISafetyLabel != null)
-                    hash = hash * 59 + this.MRISafetyLabel.GetHashCode();
-                if (this.MRISafetySource != null)
-                    hash = hash * 59 + this.MRISafetySource.GetHashCode();
+                if (this.AlternateCompanyId != null)
+                    hash = hash * 59 + this.AlternateCompanyId.GetHashCode();
+                if (this.AlternateCompanyName != null)
+                    hash = hash * 59 + this.AlternateCompanyName.GetHashCode();
                 return hash;
             }
         }
