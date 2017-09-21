@@ -71,12 +71,12 @@ namespace DeviceSample.Model
         /// <param name="CombinationProduct">CombinationProduct.</param>
         /// <param name="HumanCellTissue">HumanCellTissue.</param>
         /// <param name="HCPCS">HCPCS.</param>
-        /// <param name="FDAProductCodes">FDAProductCodes.</param>
+        /// <param name="FDAProductCodeClassifications">FDAProductCodeClassifications.</param>
         /// <param name="MRISafety">MRISafety.</param>
         /// <param name="StorageHandling">StorageHandling.</param>
         /// <param name="DeviceProperties">DeviceProperties.</param>
         /// <param name="PrizmEndDate">PrizmEndDate.</param>
-        public Device(int? PrizmId = default(int?), string StandardDeviceName = default(string), string EnhancedDeviceName = default(string), string EnhancedDeviceNameLong = default(string), string BrandName = default(string), string GUDIDBrandName = default(string), string GUDIDDescription = default(string), string UDIDeviceId = default(string), string UDIDeviceIdSecondary = default(string), string UDIDeviceIdPublishDate = default(string), string GTIN14 = default(string), string HIBC = default(string), string ISBT128 = default(string), string GUDIDVersionModelNumber = default(string), string VersionNumber = default(string), string ModelNumber = default(string), Company Company = default(Company), List<Contact> Contacts = default(List<Contact>), List<AlternateCompany> AlternateCompanies = default(List<AlternateCompany>), List<CatalogNumberInfo> CatalogNumbers = default(List<CatalogNumberInfo>), List<Size> Sizes = default(List<Size>), List<Package> Packages = default(List<Package>), List<DeviceCategory> DeviceCategories = default(List<DeviceCategory>), int? StatusId = default(int?), string StatusDesc = default(string), int? LotNumberControlCode = default(int?), int? SerialNumberControlCode = default(int?), int? ExpirationDateControlCode = default(int?), int? ManufacturedDateControlCode = default(int?), int? DonationIdNumberControlCode = default(int?), List<AlternateDeviceNameInfo> AlternateDeviceNames = default(List<AlternateDeviceNameInfo>), string PrizmPublishDate = default(string), string PrizmRevisionDate = default(string), bool? Prescription = default(bool?), bool? OverTheCounter = default(bool?), bool? DeviceIsAKit = default(bool?), bool? SingleUse = default(bool?), bool? PackagedSterile = default(bool?), bool? RequiresSterilizationPriorUse = default(bool?), List<SterilizationMethod> SterilizationMethods = default(List<SterilizationMethod>), bool? ContainsLatex = default(bool?), bool? CombinationProduct = default(bool?), bool? HumanCellTissue = default(bool?), List<HCPCSInfo> HCPCS = default(List<HCPCSInfo>), List<FDAProductCodeInfo> FDAProductCodes = default(List<FDAProductCodeInfo>), List<MRISafetyInfo> MRISafety = default(List<MRISafetyInfo>), List<StorageHandling> StorageHandling = default(List<StorageHandling>), List<DeviceProperty> DeviceProperties = default(List<DeviceProperty>), string PrizmEndDate = default(string))
+        public Device(int? PrizmId = default(int?), string StandardDeviceName = default(string), string EnhancedDeviceName = default(string), string EnhancedDeviceNameLong = default(string), string BrandName = default(string), string GUDIDBrandName = default(string), string GUDIDDescription = default(string), string UDIDeviceId = default(string), string UDIDeviceIdSecondary = default(string), string UDIDeviceIdPublishDate = default(string), string GTIN14 = default(string), string HIBC = default(string), string ISBT128 = default(string), string GUDIDVersionModelNumber = default(string), string VersionNumber = default(string), string ModelNumber = default(string), Company Company = default(Company), List<Contact> Contacts = default(List<Contact>), List<AlternateCompany> AlternateCompanies = default(List<AlternateCompany>), List<CatalogNumberInfo> CatalogNumbers = default(List<CatalogNumberInfo>), List<Size> Sizes = default(List<Size>), List<Package> Packages = default(List<Package>), List<DeviceCategory> DeviceCategories = default(List<DeviceCategory>), int? StatusId = default(int?), string StatusDesc = default(string), int? LotNumberControlCode = default(int?), int? SerialNumberControlCode = default(int?), int? ExpirationDateControlCode = default(int?), int? ManufacturedDateControlCode = default(int?), int? DonationIdNumberControlCode = default(int?), List<AlternateDeviceNameInfo> AlternateDeviceNames = default(List<AlternateDeviceNameInfo>), string PrizmPublishDate = default(string), string PrizmRevisionDate = default(string), bool? Prescription = default(bool?), bool? OverTheCounter = default(bool?), bool? DeviceIsAKit = default(bool?), bool? SingleUse = default(bool?), bool? PackagedSterile = default(bool?), bool? RequiresSterilizationPriorUse = default(bool?), List<SterilizationMethod> SterilizationMethods = default(List<SterilizationMethod>), bool? ContainsLatex = default(bool?), bool? CombinationProduct = default(bool?), bool? HumanCellTissue = default(bool?), List<HCPCSInfo> HCPCS = default(List<HCPCSInfo>), List<FDAProductCodeClassification> FDAProductCodeClassifications = default(List<FDAProductCodeClassification>), List<MRISafetyInfo> MRISafety = default(List<MRISafetyInfo>), List<StorageHandling> StorageHandling = default(List<StorageHandling>), List<DeviceProperty> DeviceProperties = default(List<DeviceProperty>), string PrizmEndDate = default(string))
         {
             this.PrizmId = PrizmId;
             this.StandardDeviceName = StandardDeviceName;
@@ -122,7 +122,7 @@ namespace DeviceSample.Model
             this.CombinationProduct = CombinationProduct;
             this.HumanCellTissue = HumanCellTissue;
             this.HCPCS = HCPCS;
-            this.FDAProductCodes = FDAProductCodes;
+            this.FDAProductCodeClassifications = FDAProductCodeClassifications;
             this.MRISafety = MRISafety;
             this.StorageHandling = StorageHandling;
             this.DeviceProperties = DeviceProperties;
@@ -394,10 +394,10 @@ namespace DeviceSample.Model
         public List<HCPCSInfo> HCPCS { get; set; }
 
         /// <summary>
-        /// Gets or Sets FDAProductCodes
+        /// Gets or Sets FDAProductCodeClassifications
         /// </summary>
-        [DataMember(Name="FDAProductCodes", EmitDefaultValue=false)]
-        public List<FDAProductCodeInfo> FDAProductCodes { get; set; }
+        [DataMember(Name="FDAProductCodeClassifications", EmitDefaultValue=false)]
+        public List<FDAProductCodeClassification> FDAProductCodeClassifications { get; set; }
 
         /// <summary>
         /// Gets or Sets MRISafety
@@ -475,7 +475,7 @@ namespace DeviceSample.Model
             sb.Append("  CombinationProduct: ").Append(CombinationProduct).Append("\n");
             sb.Append("  HumanCellTissue: ").Append(HumanCellTissue).Append("\n");
             sb.Append("  HCPCS: ").Append(HCPCS).Append("\n");
-            sb.Append("  FDAProductCodes: ").Append(FDAProductCodes).Append("\n");
+            sb.Append("  FDAProductCodeClassifications: ").Append(FDAProductCodeClassifications).Append("\n");
             sb.Append("  MRISafety: ").Append(MRISafety).Append("\n");
             sb.Append("  StorageHandling: ").Append(StorageHandling).Append("\n");
             sb.Append("  DeviceProperties: ").Append(DeviceProperties).Append("\n");
@@ -737,9 +737,9 @@ namespace DeviceSample.Model
                     this.HCPCS.SequenceEqual(other.HCPCS)
                 ) && 
                 (
-                    this.FDAProductCodes == other.FDAProductCodes ||
-                    this.FDAProductCodes != null &&
-                    this.FDAProductCodes.SequenceEqual(other.FDAProductCodes)
+                    this.FDAProductCodeClassifications == other.FDAProductCodeClassifications ||
+                    this.FDAProductCodeClassifications != null &&
+                    this.FDAProductCodeClassifications.SequenceEqual(other.FDAProductCodeClassifications)
                 ) && 
                 (
                     this.MRISafety == other.MRISafety ||
@@ -862,8 +862,8 @@ namespace DeviceSample.Model
                     hash = hash * 59 + this.HumanCellTissue.GetHashCode();
                 if (this.HCPCS != null)
                     hash = hash * 59 + this.HCPCS.GetHashCode();
-                if (this.FDAProductCodes != null)
-                    hash = hash * 59 + this.FDAProductCodes.GetHashCode();
+                if (this.FDAProductCodeClassifications != null)
+                    hash = hash * 59 + this.FDAProductCodeClassifications.GetHashCode();
                 if (this.MRISafety != null)
                     hash = hash * 59 + this.MRISafety.GetHashCode();
                 if (this.StorageHandling != null)

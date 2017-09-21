@@ -65,7 +65,7 @@
     <Compile Include="Model\Device.cs" />
     <Compile Include="Model\DeviceCategory.cs" />
     <Compile Include="Model\DeviceProperty.cs" />
-    <Compile Include="Model\FDAProductCodeInfo.cs" />
+    <Compile Include="Model\FDAProductCodeClassification.cs" />
     <Compile Include="Model\HCPCSInfo.cs" />
     <Compile Include="Model\MRISafetyInfo.cs" />
     <Compile Include="Model\Package.cs" />

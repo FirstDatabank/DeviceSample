@@ -28,7 +28,7 @@ namespace DeviceSample.Model
         /// Initializes a new instance of the <see cref="Package" /> class.
         /// </summary>
         /// <param name="PrizmPackageId">PrizmPackageId.</param>
-        /// <param name="PackageCount">PackageCount.</param>
+        /// <param name="InnerPackageCount">InnerPackageCount.</param>
         /// <param name="TotalDeviceCount">TotalDeviceCount.</param>
         /// <param name="PackageTypeCode">PackageTypeCode.</param>
         /// <param name="PackageTypeDesc">PackageTypeDesc.</param>
@@ -38,10 +38,10 @@ namespace DeviceSample.Model
         /// <param name="IsUnitOfUse">IsUnitOfUse.</param>
         /// <param name="PackageIdentifiers">PackageIdentifiers.</param>
         /// <param name="PackagingCompanies">PackagingCompanies.</param>
-        public Package(int? PrizmPackageId = default(int?), string PackageCount = default(string), string TotalDeviceCount = default(string), string PackageTypeCode = default(string), string PackageTypeDesc = default(string), int? InnerPrizmPackageId = default(int?), int? PackageStatusId = default(int?), string PackageStatusDesc = default(string), bool? IsUnitOfUse = default(bool?), List<PackageIdentifier> PackageIdentifiers = default(List<PackageIdentifier>), List<PackagingCompany> PackagingCompanies = default(List<PackagingCompany>))
+        public Package(int? PrizmPackageId = default(int?), string InnerPackageCount = default(string), string TotalDeviceCount = default(string), string PackageTypeCode = default(string), string PackageTypeDesc = default(string), int? InnerPrizmPackageId = default(int?), int? PackageStatusId = default(int?), string PackageStatusDesc = default(string), bool? IsUnitOfUse = default(bool?), List<PackageIdentifier> PackageIdentifiers = default(List<PackageIdentifier>), List<PackagingCompany> PackagingCompanies = default(List<PackagingCompany>))
         {
             this.PrizmPackageId = PrizmPackageId;
-            this.PackageCount = PackageCount;
+            this.InnerPackageCount = InnerPackageCount;
             this.TotalDeviceCount = TotalDeviceCount;
             this.PackageTypeCode = PackageTypeCode;
             this.PackageTypeDesc = PackageTypeDesc;
@@ -60,10 +60,10 @@ namespace DeviceSample.Model
         public int? PrizmPackageId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PackageCount
+        /// Gets or Sets InnerPackageCount
         /// </summary>
-        [DataMember(Name="PackageCount", EmitDefaultValue=false)]
-        public string PackageCount { get; set; }
+        [DataMember(Name="InnerPackageCount", EmitDefaultValue=false)]
+        public string InnerPackageCount { get; set; }
 
         /// <summary>
         /// Gets or Sets TotalDeviceCount
@@ -128,7 +128,7 @@ namespace DeviceSample.Model
             var sb = new StringBuilder();
             sb.Append("class Package {\n");
             sb.Append("  PrizmPackageId: ").Append(PrizmPackageId).Append("\n");
-            sb.Append("  PackageCount: ").Append(PackageCount).Append("\n");
+            sb.Append("  InnerPackageCount: ").Append(InnerPackageCount).Append("\n");
             sb.Append("  TotalDeviceCount: ").Append(TotalDeviceCount).Append("\n");
             sb.Append("  PackageTypeCode: ").Append(PackageTypeCode).Append("\n");
             sb.Append("  PackageTypeDesc: ").Append(PackageTypeDesc).Append("\n");
@@ -180,9 +180,9 @@ namespace DeviceSample.Model
                     this.PrizmPackageId.Equals(other.PrizmPackageId)
                 ) && 
                 (
-                    this.PackageCount == other.PackageCount ||
-                    this.PackageCount != null &&
-                    this.PackageCount.Equals(other.PackageCount)
+                    this.InnerPackageCount == other.InnerPackageCount ||
+                    this.InnerPackageCount != null &&
+                    this.InnerPackageCount.Equals(other.InnerPackageCount)
                 ) && 
                 (
                     this.TotalDeviceCount == other.TotalDeviceCount ||
@@ -244,8 +244,8 @@ namespace DeviceSample.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.PrizmPackageId != null)
                     hash = hash * 59 + this.PrizmPackageId.GetHashCode();
-                if (this.PackageCount != null)
-                    hash = hash * 59 + this.PackageCount.GetHashCode();
+                if (this.InnerPackageCount != null)
+                    hash = hash * 59 + this.InnerPackageCount.GetHashCode();
                 if (this.TotalDeviceCount != null)
                     hash = hash * 59 + this.TotalDeviceCount.GetHashCode();
                 if (this.PackageTypeCode != null)

@@ -18,18 +18,18 @@ using System.ComponentModel.DataAnnotations;
 namespace DeviceSample.Model
 {
     /// <summary>
-    /// FDAProductCodeInfo
+    /// FDAProductCodeClassification
     /// </summary>
     [DataContract]
-    public partial class FDAProductCodeInfo :  IEquatable<FDAProductCodeInfo>, IValidatableObject
+    public partial class FDAProductCodeClassification :  IEquatable<FDAProductCodeClassification>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FDAProductCodeInfo" /> class.
+        /// Initializes a new instance of the <see cref="FDAProductCodeClassification" /> class.
         /// </summary>
         /// <param name="FDAProductCode">FDAProductCode.</param>
         /// <param name="FDAProductCodeName">FDAProductCodeName.</param>
         /// <param name="FDAProductClass">FDAProductClass.</param>
-        public FDAProductCodeInfo(string FDAProductCode = default(string), string FDAProductCodeName = default(string), string FDAProductClass = default(string))
+        public FDAProductCodeClassification(string FDAProductCode = default(string), string FDAProductCodeName = default(string), string FDAProductClass = default(string))
         {
             this.FDAProductCode = FDAProductCode;
             this.FDAProductCodeName = FDAProductCodeName;
@@ -61,7 +61,7 @@ namespace DeviceSample.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FDAProductCodeInfo {\n");
+            sb.Append("class FDAProductCodeClassification {\n");
             sb.Append("  FDAProductCode: ").Append(FDAProductCode).Append("\n");
             sb.Append("  FDAProductCodeName: ").Append(FDAProductCodeName).Append("\n");
             sb.Append("  FDAProductClass: ").Append(FDAProductClass).Append("\n");
@@ -86,15 +86,15 @@ namespace DeviceSample.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FDAProductCodeInfo);
+            return this.Equals(obj as FDAProductCodeClassification);
         }
 
         /// <summary>
-        /// Returns true if FDAProductCodeInfo instances are equal
+        /// Returns true if FDAProductCodeClassification instances are equal
         /// </summary>
-        /// <param name="other">Instance of FDAProductCodeInfo to be compared</param>
+        /// <param name="other">Instance of FDAProductCodeClassification to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FDAProductCodeInfo other)
+        public bool Equals(FDAProductCodeClassification other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
