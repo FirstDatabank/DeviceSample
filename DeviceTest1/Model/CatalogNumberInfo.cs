@@ -29,13 +29,13 @@ namespace DeviceSample.Model
         /// <param name="CatalogNumber">CatalogNumber.</param>
         /// <param name="IsTransactional">IsTransactional.</param>
         /// <param name="IsLabeled">IsLabeled.</param>
-        /// <param name="CatalogLabelerName">CatalogLabelerName.</param>
-        public CatalogNumberInfo(string CatalogNumber = default(string), bool? IsTransactional = default(bool?), bool? IsLabeled = default(bool?), string CatalogLabelerName = default(string))
+        /// <param name="CatalogCompanyName">CatalogCompanyName.</param>
+        public CatalogNumberInfo(string CatalogNumber = default(string), bool? IsTransactional = default(bool?), bool? IsLabeled = default(bool?), string CatalogCompanyName = default(string))
         {
             this.CatalogNumber = CatalogNumber;
             this.IsTransactional = IsTransactional;
             this.IsLabeled = IsLabeled;
-            this.CatalogLabelerName = CatalogLabelerName;
+            this.CatalogCompanyName = CatalogCompanyName;
         }
         
         /// <summary>
@@ -57,10 +57,10 @@ namespace DeviceSample.Model
         public bool? IsLabeled { get; set; }
 
         /// <summary>
-        /// Gets or Sets CatalogLabelerName
+        /// Gets or Sets CatalogCompanyName
         /// </summary>
-        [DataMember(Name="CatalogLabelerName", EmitDefaultValue=false)]
-        public string CatalogLabelerName { get; set; }
+        [DataMember(Name="CatalogCompanyName", EmitDefaultValue=false)]
+        public string CatalogCompanyName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -73,7 +73,7 @@ namespace DeviceSample.Model
             sb.Append("  CatalogNumber: ").Append(CatalogNumber).Append("\n");
             sb.Append("  IsTransactional: ").Append(IsTransactional).Append("\n");
             sb.Append("  IsLabeled: ").Append(IsLabeled).Append("\n");
-            sb.Append("  CatalogLabelerName: ").Append(CatalogLabelerName).Append("\n");
+            sb.Append("  CatalogCompanyName: ").Append(CatalogCompanyName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,9 +126,9 @@ namespace DeviceSample.Model
                     this.IsLabeled.Equals(other.IsLabeled)
                 ) && 
                 (
-                    this.CatalogLabelerName == other.CatalogLabelerName ||
-                    this.CatalogLabelerName != null &&
-                    this.CatalogLabelerName.Equals(other.CatalogLabelerName)
+                    this.CatalogCompanyName == other.CatalogCompanyName ||
+                    this.CatalogCompanyName != null &&
+                    this.CatalogCompanyName.Equals(other.CatalogCompanyName)
                 );
         }
 
@@ -149,8 +149,8 @@ namespace DeviceSample.Model
                     hash = hash * 59 + this.IsTransactional.GetHashCode();
                 if (this.IsLabeled != null)
                     hash = hash * 59 + this.IsLabeled.GetHashCode();
-                if (this.CatalogLabelerName != null)
-                    hash = hash * 59 + this.CatalogLabelerName.GetHashCode();
+                if (this.CatalogCompanyName != null)
+                    hash = hash * 59 + this.CatalogCompanyName.GetHashCode();
                 return hash;
             }
         }

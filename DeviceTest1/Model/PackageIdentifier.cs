@@ -29,14 +29,12 @@ namespace DeviceSample.Model
         /// <param name="ExternalPackageId">ExternalPackageId.</param>
         /// <param name="ExternalPackageIdType">ExternalPackageIdType.</param>
         /// <param name="ExternalPackageIdDesignatorAgency">ExternalPackageIdDesignatorAgency.</param>
-        /// <param name="ExternalPackageIdDesignatorId">ExternalPackageIdDesignatorId.</param>
         /// <param name="ExternalPackageIdDesignator">ExternalPackageIdDesignator.</param>
-        public PackageIdentifier(string ExternalPackageId = default(string), string ExternalPackageIdType = default(string), string ExternalPackageIdDesignatorAgency = default(string), int? ExternalPackageIdDesignatorId = default(int?), string ExternalPackageIdDesignator = default(string))
+        public PackageIdentifier(string ExternalPackageId = default(string), string ExternalPackageIdType = default(string), string ExternalPackageIdDesignatorAgency = default(string), string ExternalPackageIdDesignator = default(string))
         {
             this.ExternalPackageId = ExternalPackageId;
             this.ExternalPackageIdType = ExternalPackageIdType;
             this.ExternalPackageIdDesignatorAgency = ExternalPackageIdDesignatorAgency;
-            this.ExternalPackageIdDesignatorId = ExternalPackageIdDesignatorId;
             this.ExternalPackageIdDesignator = ExternalPackageIdDesignator;
         }
         
@@ -59,12 +57,6 @@ namespace DeviceSample.Model
         public string ExternalPackageIdDesignatorAgency { get; set; }
 
         /// <summary>
-        /// Gets or Sets ExternalPackageIdDesignatorId
-        /// </summary>
-        [DataMember(Name="ExternalPackageIdDesignatorId", EmitDefaultValue=false)]
-        public int? ExternalPackageIdDesignatorId { get; set; }
-
-        /// <summary>
         /// Gets or Sets ExternalPackageIdDesignator
         /// </summary>
         [DataMember(Name="ExternalPackageIdDesignator", EmitDefaultValue=false)]
@@ -81,7 +73,6 @@ namespace DeviceSample.Model
             sb.Append("  ExternalPackageId: ").Append(ExternalPackageId).Append("\n");
             sb.Append("  ExternalPackageIdType: ").Append(ExternalPackageIdType).Append("\n");
             sb.Append("  ExternalPackageIdDesignatorAgency: ").Append(ExternalPackageIdDesignatorAgency).Append("\n");
-            sb.Append("  ExternalPackageIdDesignatorId: ").Append(ExternalPackageIdDesignatorId).Append("\n");
             sb.Append("  ExternalPackageIdDesignator: ").Append(ExternalPackageIdDesignator).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -135,11 +126,6 @@ namespace DeviceSample.Model
                     this.ExternalPackageIdDesignatorAgency.Equals(other.ExternalPackageIdDesignatorAgency)
                 ) && 
                 (
-                    this.ExternalPackageIdDesignatorId == other.ExternalPackageIdDesignatorId ||
-                    this.ExternalPackageIdDesignatorId != null &&
-                    this.ExternalPackageIdDesignatorId.Equals(other.ExternalPackageIdDesignatorId)
-                ) && 
-                (
                     this.ExternalPackageIdDesignator == other.ExternalPackageIdDesignator ||
                     this.ExternalPackageIdDesignator != null &&
                     this.ExternalPackageIdDesignator.Equals(other.ExternalPackageIdDesignator)
@@ -163,8 +149,6 @@ namespace DeviceSample.Model
                     hash = hash * 59 + this.ExternalPackageIdType.GetHashCode();
                 if (this.ExternalPackageIdDesignatorAgency != null)
                     hash = hash * 59 + this.ExternalPackageIdDesignatorAgency.GetHashCode();
-                if (this.ExternalPackageIdDesignatorId != null)
-                    hash = hash * 59 + this.ExternalPackageIdDesignatorId.GetHashCode();
                 if (this.ExternalPackageIdDesignator != null)
                     hash = hash * 59 + this.ExternalPackageIdDesignator.GetHashCode();
                 return hash;
