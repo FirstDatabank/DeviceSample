@@ -41,21 +41,24 @@ namespace DeviceSample
                 var request = "devices?limit=100&offset=1&callSystemName=ConsoleAppExample";
 
                 //OTHER EXAMPLES:
-                //Here is an example of searching for a GTIN_14
-                //var request = "devices?searchFilter=GTIN_14:09420012421777&callSystemName=ConsoleAppExample";
+                //Here is an example of searching for a GTIN14
+                //var request = "devices?searchFilter=GTIN14:09420012421777&callSystemName=ConsoleAppExample";
 
                 //Here is an example of searching for a HIBC
                 //var request = "devices?searchFilter=HIBC:H67141496090&callSystemName=ConsoleAppExample";
 
                 //Here is an example of searching for any identifier (GTIN, HIBC, NDC/NHRIC, UPN etc.)
-                //var request = "devices?searchFilter=ExternalDeviceId:H67141496090&callSystemName=ConsoleAppExample";
+                //var request = "devices?searchFilter=ExternalPackageId:H67141496090&callSystemName=ConsoleAppExample";
 
 
                 //Here is an example where you are searching and you don't necessarily know the type
                 //var request = "devices?searchText=H67141496090&searchType=Fuzzy&callSystemName=ConsoleAppExample";
 
+                //Here is an example where you can search between dates on the PrizmPublishDate
+                //var request = "devices?SearchFilter=PrizmPublishDate:[2017-01-05 TO 2017-01-10]"; 
+
                 //Here is an example where you can search between dates on the PrizmRevisionDate
-                //var request = "devices?SearchFilter=PrizmRevisionDate:[2017-01-05 TO 2017-01-10]"; 
+                //var request = "devices?SearchFilter=PrizmRevisionDate:[2017-09-01 TO 2017-09-25]"; 
 
 
                 //We always recommend calling API services asynchronously
