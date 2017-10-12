@@ -45,7 +45,7 @@ namespace DeviceSample.Model
         /// <param name="ModelNumber">ModelNumber.</param>
         /// <param name="Company">Company.</param>
         /// <param name="Contacts">Contacts.</param>
-        /// <param name="AlternateCompanies">AlternateCompanies.</param>
+        /// <param name="AssociatedCompanies">AssociatedCompanies.</param>
         /// <param name="CatalogNumbers">CatalogNumbers.</param>
         /// <param name="Sizes">Sizes.</param>
         /// <param name="Packages">Packages.</param>
@@ -57,7 +57,7 @@ namespace DeviceSample.Model
         /// <param name="ExpirationDateControlCode">ExpirationDateControlCode.</param>
         /// <param name="ManufacturedDateControlCode">ManufacturedDateControlCode.</param>
         /// <param name="DonationIdNumberControlCode">DonationIdNumberControlCode.</param>
-        /// <param name="AlternateDeviceNames">AlternateDeviceNames.</param>
+        /// <param name="AlternativeDeviceNames">AlternativeDeviceNames.</param>
         /// <param name="PrizmPublishDate">PrizmPublishDate.</param>
         /// <param name="PrizmRevisionDate">PrizmRevisionDate.</param>
         /// <param name="Prescription">Prescription.</param>
@@ -76,7 +76,7 @@ namespace DeviceSample.Model
         /// <param name="StorageHandling">StorageHandling.</param>
         /// <param name="DeviceProperties">DeviceProperties.</param>
         /// <param name="PrizmEndDate">PrizmEndDate.</param>
-        public Device(int? PrizmId = default(int?), string StandardDeviceName = default(string), string EnhancedDeviceName = default(string), string EnhancedDeviceNameLong = default(string), string BrandName = default(string), string GUDIDBrandName = default(string), string GUDIDDescription = default(string), string UDIDeviceId = default(string), string UDIDeviceIdSecondary = default(string), string UDIDeviceIdPublishDate = default(string), string GTIN14 = default(string), string HIBC = default(string), string ISBT128 = default(string), string GUDIDVersionModelNumber = default(string), string VersionNumber = default(string), string ModelNumber = default(string), Company Company = default(Company), List<Contact> Contacts = default(List<Contact>), List<AlternateCompany> AlternateCompanies = default(List<AlternateCompany>), List<CatalogNumberInfo> CatalogNumbers = default(List<CatalogNumberInfo>), List<Size> Sizes = default(List<Size>), List<Package> Packages = default(List<Package>), List<DeviceCategory> DeviceCategories = default(List<DeviceCategory>), int? StatusId = default(int?), string StatusDesc = default(string), int? LotNumberControlCode = default(int?), int? SerialNumberControlCode = default(int?), int? ExpirationDateControlCode = default(int?), int? ManufacturedDateControlCode = default(int?), int? DonationIdNumberControlCode = default(int?), List<AlternateDeviceNameInfo> AlternateDeviceNames = default(List<AlternateDeviceNameInfo>), string PrizmPublishDate = default(string), string PrizmRevisionDate = default(string), bool? Prescription = default(bool?), bool? OverTheCounter = default(bool?), bool? DeviceIsAKit = default(bool?), bool? SingleUse = default(bool?), bool? PackagedSterile = default(bool?), bool? RequiresSterilizationPriorUse = default(bool?), List<SterilizationMethod> SterilizationMethods = default(List<SterilizationMethod>), bool? ContainsLatex = default(bool?), bool? CombinationProduct = default(bool?), bool? HumanCellTissue = default(bool?), List<HCPCSInfo> HCPCS = default(List<HCPCSInfo>), List<FDAProductCodeClassification> FDAProductCodeClassifications = default(List<FDAProductCodeClassification>), List<MRISafetyInfo> MRISafety = default(List<MRISafetyInfo>), List<StorageHandling> StorageHandling = default(List<StorageHandling>), List<DeviceProperty> DeviceProperties = default(List<DeviceProperty>), string PrizmEndDate = default(string))
+        public Device(int? PrizmId = default(int?), string StandardDeviceName = default(string), string EnhancedDeviceName = default(string), string EnhancedDeviceNameLong = default(string), string BrandName = default(string), string GUDIDBrandName = default(string), string GUDIDDescription = default(string), string UDIDeviceId = default(string), string UDIDeviceIdSecondary = default(string), string UDIDeviceIdPublishDate = default(string), string GTIN14 = default(string), string HIBC = default(string), string ISBT128 = default(string), string GUDIDVersionModelNumber = default(string), string VersionNumber = default(string), string ModelNumber = default(string), Company Company = default(Company), List<Contact> Contacts = default(List<Contact>), List<AssociatedCompany> AssociatedCompanies = default(List<AssociatedCompany>), List<CatalogNumberInfo> CatalogNumbers = default(List<CatalogNumberInfo>), List<Size> Sizes = default(List<Size>), List<Package> Packages = default(List<Package>), List<DeviceCategory> DeviceCategories = default(List<DeviceCategory>), int? StatusId = default(int?), string StatusDesc = default(string), int? LotNumberControlCode = default(int?), int? SerialNumberControlCode = default(int?), int? ExpirationDateControlCode = default(int?), int? ManufacturedDateControlCode = default(int?), int? DonationIdNumberControlCode = default(int?), List<AlternativeDeviceNameInfo> AlternativeDeviceNames = default(List<AlternativeDeviceNameInfo>), string PrizmPublishDate = default(string), string PrizmRevisionDate = default(string), bool? Prescription = default(bool?), bool? OverTheCounter = default(bool?), bool? DeviceIsAKit = default(bool?), bool? SingleUse = default(bool?), bool? PackagedSterile = default(bool?), bool? RequiresSterilizationPriorUse = default(bool?), List<SterilizationMethod> SterilizationMethods = default(List<SterilizationMethod>), bool? ContainsLatex = default(bool?), bool? CombinationProduct = default(bool?), bool? HumanCellTissue = default(bool?), List<HCPCSInfo> HCPCS = default(List<HCPCSInfo>), List<FDAProductCodeClassification> FDAProductCodeClassifications = default(List<FDAProductCodeClassification>), List<MRISafetyInfo> MRISafety = default(List<MRISafetyInfo>), List<StorageHandling> StorageHandling = default(List<StorageHandling>), List<DeviceProperty> DeviceProperties = default(List<DeviceProperty>), string PrizmEndDate = default(string))
         {
             this.PrizmId = PrizmId;
             this.StandardDeviceName = StandardDeviceName;
@@ -96,7 +96,7 @@ namespace DeviceSample.Model
             this.ModelNumber = ModelNumber;
             this.Company = Company;
             this.Contacts = Contacts;
-            this.AlternateCompanies = AlternateCompanies;
+            this.AssociatedCompanies = AssociatedCompanies;
             this.CatalogNumbers = CatalogNumbers;
             this.Sizes = Sizes;
             this.Packages = Packages;
@@ -108,7 +108,7 @@ namespace DeviceSample.Model
             this.ExpirationDateControlCode = ExpirationDateControlCode;
             this.ManufacturedDateControlCode = ManufacturedDateControlCode;
             this.DonationIdNumberControlCode = DonationIdNumberControlCode;
-            this.AlternateDeviceNames = AlternateDeviceNames;
+            this.AlternativeDeviceNames = AlternativeDeviceNames;
             this.PrizmPublishDate = PrizmPublishDate;
             this.PrizmRevisionDate = PrizmRevisionDate;
             this.Prescription = Prescription;
@@ -238,10 +238,10 @@ namespace DeviceSample.Model
         public List<Contact> Contacts { get; set; }
 
         /// <summary>
-        /// Gets or Sets AlternateCompanies
+        /// Gets or Sets AssociatedCompanies
         /// </summary>
-        [DataMember(Name="AlternateCompanies", EmitDefaultValue=false)]
-        public List<AlternateCompany> AlternateCompanies { get; set; }
+        [DataMember(Name="AssociatedCompanies", EmitDefaultValue=false)]
+        public List<AssociatedCompany> AssociatedCompanies { get; set; }
 
         /// <summary>
         /// Gets or Sets CatalogNumbers
@@ -310,10 +310,10 @@ namespace DeviceSample.Model
         public int? DonationIdNumberControlCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets AlternateDeviceNames
+        /// Gets or Sets AlternativeDeviceNames
         /// </summary>
-        [DataMember(Name="AlternateDeviceNames", EmitDefaultValue=false)]
-        public List<AlternateDeviceNameInfo> AlternateDeviceNames { get; set; }
+        [DataMember(Name="AlternativeDeviceNames", EmitDefaultValue=false)]
+        public List<AlternativeDeviceNameInfo> AlternativeDeviceNames { get; set; }
 
         /// <summary>
         /// Gets or Sets PrizmPublishDate
@@ -449,7 +449,7 @@ namespace DeviceSample.Model
             sb.Append("  ModelNumber: ").Append(ModelNumber).Append("\n");
             sb.Append("  Company: ").Append(Company).Append("\n");
             sb.Append("  Contacts: ").Append(Contacts).Append("\n");
-            sb.Append("  AlternateCompanies: ").Append(AlternateCompanies).Append("\n");
+            sb.Append("  AssociatedCompanies: ").Append(AssociatedCompanies).Append("\n");
             sb.Append("  CatalogNumbers: ").Append(CatalogNumbers).Append("\n");
             sb.Append("  Sizes: ").Append(Sizes).Append("\n");
             sb.Append("  Packages: ").Append(Packages).Append("\n");
@@ -461,7 +461,7 @@ namespace DeviceSample.Model
             sb.Append("  ExpirationDateControlCode: ").Append(ExpirationDateControlCode).Append("\n");
             sb.Append("  ManufacturedDateControlCode: ").Append(ManufacturedDateControlCode).Append("\n");
             sb.Append("  DonationIdNumberControlCode: ").Append(DonationIdNumberControlCode).Append("\n");
-            sb.Append("  AlternateDeviceNames: ").Append(AlternateDeviceNames).Append("\n");
+            sb.Append("  AlternativeDeviceNames: ").Append(AlternativeDeviceNames).Append("\n");
             sb.Append("  PrizmPublishDate: ").Append(PrizmPublishDate).Append("\n");
             sb.Append("  PrizmRevisionDate: ").Append(PrizmRevisionDate).Append("\n");
             sb.Append("  Prescription: ").Append(Prescription).Append("\n");
@@ -607,9 +607,9 @@ namespace DeviceSample.Model
                     this.Contacts.SequenceEqual(other.Contacts)
                 ) && 
                 (
-                    this.AlternateCompanies == other.AlternateCompanies ||
-                    this.AlternateCompanies != null &&
-                    this.AlternateCompanies.SequenceEqual(other.AlternateCompanies)
+                    this.AssociatedCompanies == other.AssociatedCompanies ||
+                    this.AssociatedCompanies != null &&
+                    this.AssociatedCompanies.SequenceEqual(other.AssociatedCompanies)
                 ) && 
                 (
                     this.CatalogNumbers == other.CatalogNumbers ||
@@ -667,9 +667,9 @@ namespace DeviceSample.Model
                     this.DonationIdNumberControlCode.Equals(other.DonationIdNumberControlCode)
                 ) && 
                 (
-                    this.AlternateDeviceNames == other.AlternateDeviceNames ||
-                    this.AlternateDeviceNames != null &&
-                    this.AlternateDeviceNames.SequenceEqual(other.AlternateDeviceNames)
+                    this.AlternativeDeviceNames == other.AlternativeDeviceNames ||
+                    this.AlternativeDeviceNames != null &&
+                    this.AlternativeDeviceNames.SequenceEqual(other.AlternativeDeviceNames)
                 ) && 
                 (
                     this.PrizmPublishDate == other.PrizmPublishDate ||
@@ -810,8 +810,8 @@ namespace DeviceSample.Model
                     hash = hash * 59 + this.Company.GetHashCode();
                 if (this.Contacts != null)
                     hash = hash * 59 + this.Contacts.GetHashCode();
-                if (this.AlternateCompanies != null)
-                    hash = hash * 59 + this.AlternateCompanies.GetHashCode();
+                if (this.AssociatedCompanies != null)
+                    hash = hash * 59 + this.AssociatedCompanies.GetHashCode();
                 if (this.CatalogNumbers != null)
                     hash = hash * 59 + this.CatalogNumbers.GetHashCode();
                 if (this.Sizes != null)
@@ -834,8 +834,8 @@ namespace DeviceSample.Model
                     hash = hash * 59 + this.ManufacturedDateControlCode.GetHashCode();
                 if (this.DonationIdNumberControlCode != null)
                     hash = hash * 59 + this.DonationIdNumberControlCode.GetHashCode();
-                if (this.AlternateDeviceNames != null)
-                    hash = hash * 59 + this.AlternateDeviceNames.GetHashCode();
+                if (this.AlternativeDeviceNames != null)
+                    hash = hash * 59 + this.AlternativeDeviceNames.GetHashCode();
                 if (this.PrizmPublishDate != null)
                     hash = hash * 59 + this.PrizmPublishDate.GetHashCode();
                 if (this.PrizmRevisionDate != null)

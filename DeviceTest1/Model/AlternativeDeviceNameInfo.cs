@@ -18,25 +18,25 @@ using System.ComponentModel.DataAnnotations;
 namespace DeviceSample.Model
 {
     /// <summary>
-    /// AlternateDeviceNameInfo
+    /// AlternativeDeviceNameInfo
     /// </summary>
     [DataContract]
-    public partial class AlternateDeviceNameInfo :  IEquatable<AlternateDeviceNameInfo>, IValidatableObject
+    public partial class AlternativeDeviceNameInfo :  IEquatable<AlternativeDeviceNameInfo>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AlternateDeviceNameInfo" /> class.
+        /// Initializes a new instance of the <see cref="AlternativeDeviceNameInfo" /> class.
         /// </summary>
-        /// <param name="AlternateDeviceName">AlternateDeviceName.</param>
-        public AlternateDeviceNameInfo(string AlternateDeviceName = default(string))
+        /// <param name="AlternativeDeviceName">AlternativeDeviceName.</param>
+        public AlternativeDeviceNameInfo(string AlternativeDeviceName = default(string))
         {
-            this.AlternateDeviceName = AlternateDeviceName;
+            this.AlternativeDeviceName = AlternativeDeviceName;
         }
         
         /// <summary>
-        /// Gets or Sets AlternateDeviceName
+        /// Gets or Sets AlternativeDeviceName
         /// </summary>
-        [DataMember(Name="AlternateDeviceName", EmitDefaultValue=false)]
-        public string AlternateDeviceName { get; set; }
+        [DataMember(Name="AlternativeDeviceName", EmitDefaultValue=false)]
+        public string AlternativeDeviceName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -45,8 +45,8 @@ namespace DeviceSample.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AlternateDeviceNameInfo {\n");
-            sb.Append("  AlternateDeviceName: ").Append(AlternateDeviceName).Append("\n");
+            sb.Append("class AlternativeDeviceNameInfo {\n");
+            sb.Append("  AlternativeDeviceName: ").Append(AlternativeDeviceName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -68,15 +68,15 @@ namespace DeviceSample.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AlternateDeviceNameInfo);
+            return this.Equals(obj as AlternativeDeviceNameInfo);
         }
 
         /// <summary>
-        /// Returns true if AlternateDeviceNameInfo instances are equal
+        /// Returns true if AlternativeDeviceNameInfo instances are equal
         /// </summary>
-        /// <param name="other">Instance of AlternateDeviceNameInfo to be compared</param>
+        /// <param name="other">Instance of AlternativeDeviceNameInfo to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AlternateDeviceNameInfo other)
+        public bool Equals(AlternativeDeviceNameInfo other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -84,9 +84,9 @@ namespace DeviceSample.Model
 
             return 
                 (
-                    this.AlternateDeviceName == other.AlternateDeviceName ||
-                    this.AlternateDeviceName != null &&
-                    this.AlternateDeviceName.Equals(other.AlternateDeviceName)
+                    this.AlternativeDeviceName == other.AlternativeDeviceName ||
+                    this.AlternativeDeviceName != null &&
+                    this.AlternativeDeviceName.Equals(other.AlternativeDeviceName)
                 );
         }
 
@@ -101,8 +101,8 @@ namespace DeviceSample.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.AlternateDeviceName != null)
-                    hash = hash * 59 + this.AlternateDeviceName.GetHashCode();
+                if (this.AlternativeDeviceName != null)
+                    hash = hash * 59 + this.AlternativeDeviceName.GetHashCode();
                 return hash;
             }
         }

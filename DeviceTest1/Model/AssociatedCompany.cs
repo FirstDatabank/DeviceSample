@@ -18,33 +18,33 @@ using System.ComponentModel.DataAnnotations;
 namespace DeviceSample.Model
 {
     /// <summary>
-    /// AlternateCompany
+    /// AssociatedCompany
     /// </summary>
     [DataContract]
-    public partial class AlternateCompany :  IEquatable<AlternateCompany>, IValidatableObject
+    public partial class AssociatedCompany :  IEquatable<AssociatedCompany>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AlternateCompany" /> class.
+        /// Initializes a new instance of the <see cref="AssociatedCompany" /> class.
         /// </summary>
-        /// <param name="AlternateCompanyId">AlternateCompanyId.</param>
-        /// <param name="AlternateCompanyName">AlternateCompanyName.</param>
-        public AlternateCompany(int? AlternateCompanyId = default(int?), string AlternateCompanyName = default(string))
+        /// <param name="AssociatedCompanyId">AssociatedCompanyId.</param>
+        /// <param name="AssociatedCompanyName">AssociatedCompanyName.</param>
+        public AssociatedCompany(int? AssociatedCompanyId = default(int?), string AssociatedCompanyName = default(string))
         {
-            this.AlternateCompanyId = AlternateCompanyId;
-            this.AlternateCompanyName = AlternateCompanyName;
+            this.AssociatedCompanyId = AssociatedCompanyId;
+            this.AssociatedCompanyName = AssociatedCompanyName;
         }
         
         /// <summary>
-        /// Gets or Sets AlternateCompanyId
+        /// Gets or Sets AssociatedCompanyId
         /// </summary>
-        [DataMember(Name="AlternateCompanyId", EmitDefaultValue=false)]
-        public int? AlternateCompanyId { get; set; }
+        [DataMember(Name="AssociatedCompanyId", EmitDefaultValue=false)]
+        public int? AssociatedCompanyId { get; set; }
 
         /// <summary>
-        /// Gets or Sets AlternateCompanyName
+        /// Gets or Sets AssociatedCompanyName
         /// </summary>
-        [DataMember(Name="AlternateCompanyName", EmitDefaultValue=false)]
-        public string AlternateCompanyName { get; set; }
+        [DataMember(Name="AssociatedCompanyName", EmitDefaultValue=false)]
+        public string AssociatedCompanyName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,9 +53,9 @@ namespace DeviceSample.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AlternateCompany {\n");
-            sb.Append("  AlternateCompanyId: ").Append(AlternateCompanyId).Append("\n");
-            sb.Append("  AlternateCompanyName: ").Append(AlternateCompanyName).Append("\n");
+            sb.Append("class AssociatedCompany {\n");
+            sb.Append("  AssociatedCompanyId: ").Append(AssociatedCompanyId).Append("\n");
+            sb.Append("  AssociatedCompanyName: ").Append(AssociatedCompanyName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -77,15 +77,15 @@ namespace DeviceSample.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AlternateCompany);
+            return this.Equals(obj as AssociatedCompany);
         }
 
         /// <summary>
-        /// Returns true if AlternateCompany instances are equal
+        /// Returns true if AssociatedCompany instances are equal
         /// </summary>
-        /// <param name="other">Instance of AlternateCompany to be compared</param>
+        /// <param name="other">Instance of AssociatedCompany to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AlternateCompany other)
+        public bool Equals(AssociatedCompany other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -93,14 +93,14 @@ namespace DeviceSample.Model
 
             return 
                 (
-                    this.AlternateCompanyId == other.AlternateCompanyId ||
-                    this.AlternateCompanyId != null &&
-                    this.AlternateCompanyId.Equals(other.AlternateCompanyId)
+                    this.AssociatedCompanyId == other.AssociatedCompanyId ||
+                    this.AssociatedCompanyId != null &&
+                    this.AssociatedCompanyId.Equals(other.AssociatedCompanyId)
                 ) && 
                 (
-                    this.AlternateCompanyName == other.AlternateCompanyName ||
-                    this.AlternateCompanyName != null &&
-                    this.AlternateCompanyName.Equals(other.AlternateCompanyName)
+                    this.AssociatedCompanyName == other.AssociatedCompanyName ||
+                    this.AssociatedCompanyName != null &&
+                    this.AssociatedCompanyName.Equals(other.AssociatedCompanyName)
                 );
         }
 
@@ -115,10 +115,10 @@ namespace DeviceSample.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.AlternateCompanyId != null)
-                    hash = hash * 59 + this.AlternateCompanyId.GetHashCode();
-                if (this.AlternateCompanyName != null)
-                    hash = hash * 59 + this.AlternateCompanyName.GetHashCode();
+                if (this.AssociatedCompanyId != null)
+                    hash = hash * 59 + this.AssociatedCompanyId.GetHashCode();
+                if (this.AssociatedCompanyName != null)
+                    hash = hash * 59 + this.AssociatedCompanyName.GetHashCode();
                 return hash;
             }
         }

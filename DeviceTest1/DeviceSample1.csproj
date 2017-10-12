@@ -56,8 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="enums.cs" />
-    <Compile Include="Model\AlternateCompany.cs" />
-    <Compile Include="Model\AlternateDeviceNameInfo.cs" />
+    <Compile Include="Model\AlternativeDeviceNameInfo.cs" />
+    <Compile Include="Model\AssociatedCompany.cs" />
     <Compile Include="Model\CatalogNumberInfo.cs" />
     <Compile Include="Model\Company.cs" />
     <Compile Include="Model\CompanyAlias.cs" />
