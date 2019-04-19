@@ -31,13 +31,15 @@ namespace DeviceSample.Model
         /// <param name="CategoryType">CategoryType.</param>
         /// <param name="CategoryCode">CategoryCode.</param>
         /// <param name="IsPrimary">IsPrimary.</param>
-        public DeviceCategory(string CategoryId = default(string), string CategoryName = default(string), string CategoryType = default(string), string CategoryCode = default(string), bool? IsPrimary = default(bool?))
+        /// <param name="IsAccessory">IsAccessory.</param>
+        public DeviceCategory(string CategoryId = default(string), string CategoryName = default(string), string CategoryType = default(string), string CategoryCode = default(string), bool? IsPrimary = default(bool?), bool? IsAccessory = default(bool?))
         {
             this.CategoryId = CategoryId;
             this.CategoryName = CategoryName;
             this.CategoryType = CategoryType;
             this.CategoryCode = CategoryCode;
             this.IsPrimary = IsPrimary;
+            this.IsAccessory = IsAccessory;
         }
         
         /// <summary>
@@ -71,6 +73,12 @@ namespace DeviceSample.Model
         public bool? IsPrimary { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsAccessory
+        /// </summary>
+        [DataMember(Name = "IsAccessory", EmitDefaultValue = false)]
+        public bool? IsAccessory { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -83,6 +91,7 @@ namespace DeviceSample.Model
             sb.Append("  CategoryType: ").Append(CategoryType).Append("\n");
             sb.Append("  CategoryCode: ").Append(CategoryCode).Append("\n");
             sb.Append("  IsPrimary: ").Append(IsPrimary).Append("\n");
+            sb.Append("  IsAccessory: ").Append(IsAccessory).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

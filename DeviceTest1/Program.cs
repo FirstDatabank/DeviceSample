@@ -10,7 +10,7 @@ namespace DeviceSample
     {
         //Note:  Make this address configurable in your app.  It is almost certainly going to change for our device services.
         //Also note that right now this url and parameter names are case sensitive.
-        const string baseAddress = "https://api.fdbprizm.com/cc/api/v1_1/";
+        const string baseAddress = "https://api.fdbprizm.com/mdp/api/v1_2/";
 
         //Update these two variables with the credentials provided by FDB
         //const string clientId = "REPLACE_THIS_TEXT_WITH_YOUR_PROVIDED_CLIENT_ID";

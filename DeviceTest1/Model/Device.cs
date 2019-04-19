@@ -76,7 +76,8 @@ namespace DeviceSample.Model
         /// <param name="StorageHandling">StorageHandling.</param>
         /// <param name="DeviceProperties">DeviceProperties.</param>
         /// <param name="PrizmEndDate">PrizmEndDate.</param>
-        public Device(int? PrizmId = default(int?), string StandardDeviceName = default(string), string EnhancedDeviceName = default(string), string EnhancedDeviceNameLong = default(string), string BrandName = default(string), string GUDIDBrandName = default(string), string GUDIDDescription = default(string), string UDIDeviceId = default(string), string UDIDeviceIdSecondary = default(string), string UDIDeviceIdPublishDate = default(string), string GTIN14 = default(string), string HIBC = default(string), string ISBT128 = default(string), string GUDIDVersionModelNumber = default(string), string VersionNumber = default(string), string ModelNumber = default(string), Company Company = default(Company), List<Contact> Contacts = default(List<Contact>), List<AssociatedCompany> AssociatedCompanies = default(List<AssociatedCompany>), List<CatalogNumberInfo> CatalogNumbers = default(List<CatalogNumberInfo>), List<Size> Sizes = default(List<Size>), List<Package> Packages = default(List<Package>), List<DeviceCategory> DeviceCategories = default(List<DeviceCategory>), int? StatusId = default(int?), string StatusDesc = default(string), int? LotNumberControlCode = default(int?), int? SerialNumberControlCode = default(int?), int? ExpirationDateControlCode = default(int?), int? ManufacturedDateControlCode = default(int?), int? DonationIdNumberControlCode = default(int?), List<AlternativeDeviceNameInfo> AlternativeDeviceNames = default(List<AlternativeDeviceNameInfo>), string PrizmPublishDate = default(string), string PrizmRevisionDate = default(string), bool? Prescription = default(bool?), bool? OverTheCounter = default(bool?), bool? DeviceIsAKit = default(bool?), bool? SingleUse = default(bool?), bool? PackagedSterile = default(bool?), bool? RequiresSterilizationPriorUse = default(bool?), List<SterilizationMethod> SterilizationMethods = default(List<SterilizationMethod>), bool? ContainsLatex = default(bool?), bool? CombinationProduct = default(bool?), bool? HumanCellTissue = default(bool?), List<HCPCSInfo> HCPCS = default(List<HCPCSInfo>), List<FDAProductCodeClassification> FDAProductCodeClassifications = default(List<FDAProductCodeClassification>), List<MRISafetyInfo> MRISafety = default(List<MRISafetyInfo>), List<StorageHandling> StorageHandling = default(List<StorageHandling>), List<DeviceProperty> DeviceProperties = default(List<DeviceProperty>), string PrizmEndDate = default(string))
+        /// <param name="CommercialDistributionEndDate">CommercialDistributionEndDate</param>
+        public Device(int? PrizmId = default(int?), string StandardDeviceName = default(string), string EnhancedDeviceName = default(string), string EnhancedDeviceNameLong = default(string), string BrandName = default(string), string GUDIDBrandName = default(string), string GUDIDDescription = default(string), string UDIDeviceId = default(string), string UDIDeviceIdSecondary = default(string), string UDIDeviceIdPublishDate = default(string), string GTIN14 = default(string), string HIBC = default(string), string ISBT128 = default(string), string GUDIDVersionModelNumber = default(string), string VersionNumber = default(string), string ModelNumber = default(string), Company Company = default(Company), List<Contact> Contacts = default(List<Contact>), List<AssociatedCompany> AssociatedCompanies = default(List<AssociatedCompany>), List<CatalogNumberInfo> CatalogNumbers = default(List<CatalogNumberInfo>), List<Size> Sizes = default(List<Size>), List<Package> Packages = default(List<Package>), List<DeviceCategory> DeviceCategories = default(List<DeviceCategory>), int? StatusId = default(int?), string StatusDesc = default(string), int? LotNumberControlCode = default(int?), int? SerialNumberControlCode = default(int?), int? ExpirationDateControlCode = default(int?), int? ManufacturedDateControlCode = default(int?), int? DonationIdNumberControlCode = default(int?), List<AlternativeDeviceNameInfo> AlternativeDeviceNames = default(List<AlternativeDeviceNameInfo>), string PrizmPublishDate = default(string), string PrizmRevisionDate = default(string), bool? Prescription = default(bool?), bool? OverTheCounter = default(bool?), bool? DeviceIsAKit = default(bool?), bool? SingleUse = default(bool?), bool? PackagedSterile = default(bool?), bool? RequiresSterilizationPriorUse = default(bool?), List<SterilizationMethod> SterilizationMethods = default(List<SterilizationMethod>), bool? ContainsLatex = default(bool?), bool? CombinationProduct = default(bool?), bool? HumanCellTissue = default(bool?), List<HCPCSInfo> HCPCS = default(List<HCPCSInfo>), List<FDAProductCodeClassification> FDAProductCodeClassifications = default(List<FDAProductCodeClassification>), List<MRISafetyInfo> MRISafety = default(List<MRISafetyInfo>), List<StorageHandling> StorageHandling = default(List<StorageHandling>), List<DeviceProperty> DeviceProperties = default(List<DeviceProperty>), string PrizmEndDate = default(string), string CommercialDistributionEndDate = default(string))
         {
             this.PrizmId = PrizmId;
             this.StandardDeviceName = StandardDeviceName;
@@ -127,6 +128,7 @@ namespace DeviceSample.Model
             this.StorageHandling = StorageHandling;
             this.DeviceProperties = DeviceProperties;
             this.PrizmEndDate = PrizmEndDate;
+            this.CommercialDistributionEndDate = CommercialDistributionEndDate;
         }
         
         /// <summary>
@@ -423,6 +425,9 @@ namespace DeviceSample.Model
         [DataMember(Name="PrizmEndDate", EmitDefaultValue=false)]
         public string PrizmEndDate { get; set; }
 
+        [DataMember(Name = "CommercialDistributionEndDate", EmitDefaultValue = false)]
+        public string CommercialDistributionEndDate { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -480,6 +485,7 @@ namespace DeviceSample.Model
             sb.Append("  StorageHandling: ").Append(StorageHandling).Append("\n");
             sb.Append("  DeviceProperties: ").Append(DeviceProperties).Append("\n");
             sb.Append("  PrizmEndDate: ").Append(PrizmEndDate).Append("\n");
+            sb.Append("  CommercialDistributionEndDate: ").Append(CommercialDistributionEndDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
