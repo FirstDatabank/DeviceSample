@@ -48,18 +48,22 @@ namespace DeviceSample
                 //var request = "devices?searchFilter=HIBC:H67141496090&callSystemName=ConsoleAppExample";
 
                 //Here is an example of searching for any identifier (GTIN, HIBC, NDC/NHRIC, UPN etc.)
-                //var request = "devices?searchFilter=ExternalPackageId:H67141496090&callSystemName=ConsoleAppExample";
+                //var request = "devices?searchFilter=Packages.PackageIdentifiers.ExternalPackageId:"00841447100034"&callSystemName=ConsoleAppExample";
 
+                //Here is an example of searching for HCPCSCode
+                //var request = "devices?searchFilter=HCPCS.HCPCSCode:"K0738"&callSystemName=ConsoleAppExample";
 
                 //Here is an example where you are searching and you don't necessarily know the type
                 //var request = "devices?searchText=H67141496090&searchType=Fuzzy&callSystemName=ConsoleAppExample";
+
+                //Here is an example where you are searching for CatalogNumber
+                //var request = "devices?searchFilter=CatalogNumbers.CatalogNumber:"47-2347-123-00"&callSystemName=ConsoleAppExample";
 
                 //Here is an example where you can search between dates on the PrizmPublishDate
                 //var request = "devices?SearchFilter=PrizmPublishDate:[2017-01-05 TO 2017-01-10]"; 
 
                 //Here is an example where you can search between dates on the PrizmRevisionDate
                 //var request = "devices?SearchFilter=PrizmRevisionDate:[2017-09-01 TO 2017-09-25]"; 
-
 
                 //We always recommend calling API services asynchronously
                 HttpResponseMessage response = await client.GetAsync(request);
